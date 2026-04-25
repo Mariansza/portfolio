@@ -1,6 +1,67 @@
 {
-  "home": {
-    "title": "Marian Szawelski",
-    "subtitle": "Software engineering graduate, building fullstack products where LLMs and UX meet."
+  "metadata": {
+    "title": "Marian Szawelski — Portfolio",
+    "description": "Portfolio of Marian Szawelski, AI-focused software engineer. Fullstack and applied AI projects. Open to permanent roles in France."
+  },
+  "topbar": {
+    "shortcutLabel": "shortcut"
+  },
+  "hero": {
+    "available": "available — final-year internship · permanent role · France",
+    "name": "Marian",
+    "lastName": "Szawelski.",
+    "role": "Software engineer,",
+    "speciality": "AI specialist.",
+    "pitch": "Software engineering graduate building fullstack products where <em>LLMs and UX</em> meet — from prompt to pixel, from training pipeline to React component.",
+    "ctaProjects": "view the work",
+    "ctaCV": "download CV.pdf",
+    "indexLabel": "INDEX",
+    "nowLabel": "NOW",
+    "now": {
+      "loc": "Mulhouse, FR",
+      "edu": "ENSISA M2",
+      "exp": "Tessan · GenAI",
+      "tz": "UTC+1"
+    },
+    "lastUpdate": "last update",
+    "lastUpdateValue": "Apr. 24, 2026 · 14:32"
+  },
+  "projects": {
+    "label": "selected work",
+    "summary": "3 / 11",
+    "viewAll": "view all",
+    "items": {
+      "tessan": {
+        "title": "Tessan internship — GenAI × fullstack",
+        "pitch": "Integrating LLM workflows into Tessan's healthcare app. Python backend, React frontend, prompt and model evaluation. Inference pipelines, guardrails, patient-facing interfaces."
+      },
+      "unet": {
+        "title": "Building footprint segmentation — U-Net",
+        "pitch": "Semantic segmentation model on high-resolution satellite imagery. Preprocessing, supervised training, IoU/Dice evaluation. Reproducible pipeline, commented notebooks."
+      },
+      "ecg": {
+        "title": "ECG classification — MLP · CNN · RNN",
+        "pitch": "Heart attack detection on ECG signals. Three architectures compared, hyperparameter tuning, delivered to a cardiology department."
+      }
+    }
+  },
+  "stack": {
+    "label": "stack",
+    "groups": {
+      "langages": "languages",
+      "web": "web",
+      "ml": "ml",
+      "ops": "ops"
+    }
+  },
+  "contact": {
+    "label": "CONTACT",
+    "headlineLine1": "Let's build",
+    "headlineLine2": "together.",
+    "pitch": "Final-year internship or first permanent role, applied AI or fullstack. I reply within 24h."
+  },
+  "footer": {
+    "signature": "© 2026 — built with next.js · deployed on vercel · no cookies, no tracking",
+    "status": "all systems nominal"
   }
 }

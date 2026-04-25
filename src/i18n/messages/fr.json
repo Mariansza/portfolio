@@ -1,6 +1,67 @@
 {
-  "home": {
-    "title": "Marian Szawelski",
-    "subtitle": "Diplômé ingénieur informatique, je construis des produits fullstack où LLM et UX se rencontrent."
+  "metadata": {
+    "title": "Marian Szawelski — Portfolio",
+    "description": "Portfolio de Marian Szawelski, ingénieur logiciel spécialisé IA. Projets fullstack et IA appliquée. Disponible pour un CDI en France."
+  },
+  "topbar": {
+    "shortcutLabel": "raccourci"
+  },
+  "hero": {
+    "available": "disponible — stage fin d'études · CDI · France",
+    "name": "Marian",
+    "lastName": "Szawelski.",
+    "role": "Ingénieur logiciel,",
+    "speciality": "spécialisé IA.",
+    "pitch": "Diplômé ingénieur informatique, je construis des produits fullstack où <em>LLM et UX</em> se rencontrent — du prompt au pixel, de la pipeline d'entraînement au composant React.",
+    "ctaProjects": "voir les projets",
+    "ctaCV": "télécharger CV.pdf",
+    "indexLabel": "INDEX",
+    "nowLabel": "NOW",
+    "now": {
+      "loc": "Mulhouse, FR",
+      "edu": "ENSISA M2",
+      "exp": "Tessan · GenAI",
+      "tz": "UTC+1"
+    },
+    "lastUpdate": "dernière màj",
+    "lastUpdateValue": "24 avr. 2026 · 14:32"
+  },
+  "projects": {
+    "label": "projets phares",
+    "summary": "3 / 11",
+    "viewAll": "voir tous",
+    "items": {
+      "tessan": {
+        "title": "Stage Tessan — GenAI × fullstack",
+        "pitch": "Intégration de workflows LLM dans l'app santé de Tessan. Back Python, front React, évaluation de prompts et de modèles. Pipelines d'inférence, guardrails, et interfaces patient."
+      },
+      "unet": {
+        "title": "Segmentation de bâtiments — U-Net",
+        "pitch": "Modèle de segmentation sémantique sur imagerie satellite haute résolution. Prétraitement, entraînement supervisé, évaluation IoU/Dice. Pipeline reproductible, notebooks commentés."
+      },
+      "ecg": {
+        "title": "Classification ECG — MLP · CNN · RNN",
+        "pitch": "Détection d'infarctus sur signaux ECG. Trois architectures comparées, optimisation d'hyperparamètres, livrable pour un service de cardiologie."
+      }
+    }
+  },
+  "stack": {
+    "label": "stack",
+    "groups": {
+      "langages": "langages",
+      "web": "web",
+      "ml": "ml",
+      "ops": "ops"
+    }
+  },
+  "contact": {
+    "label": "CONTACT",
+    "headlineLine1": "Travaillons",
+    "headlineLine2": "ensemble.",
+    "pitch": "Stage de fin d'études ou premier CDI, en IA appliquée ou dev fullstack. Je réponds sous 24h."
+  },
+  "footer": {
+    "signature": "© 2026 — built with next.js · deployed on vercel · no cookies, no tracking",
+    "status": "all systems nominal"
   }
 }
