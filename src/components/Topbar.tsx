@@ -23,15 +23,25 @@ export function Topbar() {
           aria-label="primary"
           className="flex items-center gap-7 text-[13px]"
         >
-          {navItems.map((item) => (
-            <Link
-              key={item.href}
-              href={item.href}
-              className="text-mute hover:text-fg transition-colors"
-            >
-              {item.label}
-            </Link>
-          ))}
+          {navItems.map((item) =>
+            item.enabled ? (
+              <Link
+                key={item.href}
+                href={item.href}
+                className="text-mute hover:text-fg transition-colors"
+              >
+                {item.label}
+              </Link>
+            ) : (
+              <span
+                key={item.href}
+                aria-disabled="true"
+                className="text-mute-soft cursor-default"
+              >
+                {item.label}
+              </span>
+            ),
+          )}
         </nav>
         <div className="flex items-center gap-4">
           <LangToggle />

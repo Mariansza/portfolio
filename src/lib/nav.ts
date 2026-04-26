@@ -1,11 +1,12 @@
 export type NavItem = {
   label: string;
   href: '/' | '/about' | '/projects' | '/cv' | '/contact';
+  enabled: boolean;
 };
 
 export const navItems: readonly NavItem[] = [
-  { label: '~/work', href: '/projects' },
-  { label: '~/about', href: '/about' },
-  { label: '~/cv', href: '/cv' },
-  { label: '~/contact', href: '/contact' },
+  { label: '~/work', href: '/projects', enabled: false },
+  { label: '~/about', href: '/about', enabled: false },
+  { label: '~/cv', href: '/cv', enabled: false },
+  { label: '~/contact', href: '/contact', enabled: false },
 ];
