@@ -76,6 +76,48 @@
       "locationMeta": "UTC+1 · mobilité toute la France"
     }
   },
+  "about": {
+    "metadata": {
+      "title": "À propos — Marian Szawelski",
+      "description": "Parcours, formation et conviction de Marian Szawelski, ingénieur informatique spécialisé IA."
+    },
+    "breadcrumb": "about",
+    "available": "disponible — stage fin d'études · CDI · France",
+    "name": "Marian",
+    "lastName": "Szawelski.",
+    "intro": "Jeune ingénieur informatique fraîchement diplômé, spécialisé IA avec de solides compétences fullstack.",
+    "indexLabel": "ABOUT",
+    "indexItems": {
+      "intro": "01 — qui",
+      "parcours": "02 — parcours",
+      "conviction": "03 — conviction"
+    },
+    "photoCaption": "Marian, 2026",
+    "photoAlt": "Portrait de Marian Szawelski",
+    "parcours": {
+      "label": "parcours",
+      "prepa": {
+        "tag": "prépa",
+        "text": "Bac S, puis deux ans de prépa scientifique — maths, physique, chimie, informatique."
+      },
+      "ensisa": {
+        "tag": "ENSISA",
+        "text": "Concours aux grandes écoles, entrée à l'ENSISA (École Nationale Supérieure d'Ingénieurs Sud-Alsace) en filière Informatique et Réseaux."
+      },
+      "kyoto": {
+        "tag": "Kyoto",
+        "text": "Dernière année d'études en échange au Kyoto Institute of Technology, Japon."
+      },
+      "tessan": {
+        "tag": "Tessan",
+        "text": "Stage de fin d'études comme chef de projet IA chez Tessan, entreprise française de téléconsultation médicale."
+      }
+    },
+    "conviction": {
+      "label": "conviction",
+      "body": "Je crois en une IA qui sert et augmente l'humain — pas une qui le remplace. C'est cette conviction qui guide ce que je veux construire, et pour qui. Prêt à mettre mes compétences au service de produits qui en valent la peine."
+    }
+  },
   "footer": {
     "signature": "© 2026 — built with next.js · deployed on vercel · no cookies, no tracking",
     "status": "all systems nominal"

@@ -76,6 +76,48 @@
       "locationMeta": "UTC+1 · mobile across France"
     }
   },
+  "about": {
+    "metadata": {
+      "title": "About — Marian Szawelski",
+      "description": "Background, education, and conviction of Marian Szawelski, AI-focused software engineer."
+    },
+    "breadcrumb": "about",
+    "available": "available — final-year internship · permanent role · France",
+    "name": "Marian",
+    "lastName": "Szawelski.",
+    "intro": "Freshly graduated software engineer specialized in AI, with solid fullstack chops.",
+    "indexLabel": "ABOUT",
+    "indexItems": {
+      "intro": "01 — who",
+      "parcours": "02 — background",
+      "conviction": "03 — conviction"
+    },
+    "photoCaption": "Marian, 2026",
+    "photoAlt": "Portrait of Marian Szawelski",
+    "parcours": {
+      "label": "background",
+      "prepa": {
+        "tag": "prep",
+        "text": "Science-track baccalaureate, then two years of intensive prep school in math, physics, chemistry, and computer science."
+      },
+      "ensisa": {
+        "tag": "ENSISA",
+        "text": "Admitted to ENSISA (École Nationale Supérieure d'Ingénieurs Sud-Alsace), branch Computer Science and Networks, through France's national engineering competitive exams."
+      },
+      "kyoto": {
+        "tag": "Kyoto",
+        "text": "Final year of studies as an exchange student at Kyoto Institute of Technology, Japan."
+      },
+      "tessan": {
+        "tag": "Tessan",
+        "text": "Final-year internship as AI project lead at Tessan, a French telemedicine company."
+      }
+    },
+    "conviction": {
+      "label": "conviction",
+      "body": "I believe in AI that serves and augments humans — not the kind that replaces them. That conviction shapes what I want to build, and who for. Ready to put my skills to work on products worth building."
+    }
+  },
   "footer": {
     "signature": "© 2026 — built with next.js · deployed on vercel · no cookies, no tracking",
     "status": "all systems nominal"
