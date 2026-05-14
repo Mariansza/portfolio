@@ -8,5 +8,5 @@ export const navItems: readonly NavItem[] = [
   { label: '~/work', href: '/projects', enabled: false },
   { label: '~/about', href: '/about', enabled: false },
   { label: '~/cv', href: '/cv', enabled: false },
-  { label: '~/contact', href: '/contact', enabled: false },
+  { label: '~/contact', href: '/contact', enabled: true },
 ];

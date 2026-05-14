@@ -58,7 +58,23 @@
     "label": "CONTACT",
     "headlineLine1": "Travaillons",
     "headlineLine2": "ensemble.",
-    "pitch": "Stage de fin d'études ou premier CDI, en IA appliquée ou dev fullstack. Je réponds sous 24h."
+    "pitch": "Stage de fin d'études ou premier CDI, en IA appliquée ou dev fullstack. Je réponds sous 24h.",
+    "metadata": {
+      "title": "Contact — Marian Szawelski",
+      "description": "Écris-moi via email, LinkedIn ou GitHub. Disponible pour stage / CDI en France, IA appliquée et dev fullstack."
+    },
+    "page": {
+      "breadcrumb": "contact",
+      "available": "réponse sous 24h — la plupart du temps beaucoup plus vite",
+      "headline": "Dis bonjour.",
+      "intro": "Stage de fin d'études, premier CDI, ou simple discussion technique — écris-moi via n'importe lequel de ces canaux. J'aime échanger sur l'IA appliquée, le fullstack, et les produits qui respectent leurs utilisateurs.",
+      "ctaEmail": "écrire un email",
+      "ctaLinkedIn": "LinkedIn",
+      "channelsLabel": "CHANNELS",
+      "locationLabel": "LOCATION",
+      "locationPlace": "Mulhouse, FR",
+      "locationMeta": "UTC+1 · mobilité toute la France"
+    }
   },
   "footer": {
     "signature": "© 2026 — built with next.js · deployed on vercel · no cookies, no tracking",

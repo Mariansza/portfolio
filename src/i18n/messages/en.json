@@ -58,7 +58,23 @@
     "label": "CONTACT",
     "headlineLine1": "Let's build",
     "headlineLine2": "together.",
-    "pitch": "Final-year internship or first permanent role, applied AI or fullstack. I reply within 24h."
+    "pitch": "Final-year internship or first permanent role, applied AI or fullstack. I reply within 24h.",
+    "metadata": {
+      "title": "Contact — Marian Szawelski",
+      "description": "Reach me via email, LinkedIn or GitHub. Open to internship / permanent role in France, applied AI and fullstack."
+    },
+    "page": {
+      "breadcrumb": "contact",
+      "available": "reply within 24h — usually much faster",
+      "headline": "Say hello.",
+      "intro": "Final-year internship, first permanent role, or just a technical chat — reach out on any of these channels. Happy to talk about applied AI, fullstack, and products that respect their users.",
+      "ctaEmail": "send email",
+      "ctaLinkedIn": "LinkedIn",
+      "channelsLabel": "CHANNELS",
+      "locationLabel": "LOCATION",
+      "locationPlace": "Mulhouse, FR",
+      "locationMeta": "UTC+1 · mobile across France"
+    }
   },
   "footer": {
     "signature": "© 2026 — built with next.js · deployed on vercel · no cookies, no tracking",
