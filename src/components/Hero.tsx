@@ -3,15 +3,12 @@ import { SignalDot } from './SignalDot';
 
 const indexEntries = ['01 — hero', '02 — work', '03 — stack', '04 — contact'];
 
-const nowKeys = ['loc', 'edu', 'exp', 'tz'] as const;
-
 export function Hero() {
   const t = useTranslations('hero');
 
   return (
     <section className="border-hairline border-b px-6 pt-20 pb-20 lg:px-14 lg:pt-32 lg:pb-28">
-      <div className="grid grid-cols-1 gap-12 lg:grid-cols-[140px_1fr_280px]">
-        {/* Left meta — INDEX */}
+      <div className="grid grid-cols-1 gap-12 lg:grid-cols-[140px_1fr]">
         <aside
           aria-label="index"
           className="text-mute font-mono text-[11px] leading-[1.9]"
@@ -27,13 +24,12 @@ export function Hero() {
           </ul>
         </aside>
 
-        {/* Center — name + pitch + CTAs */}
         <div>
           <p className="text-mute mb-8 flex items-center gap-2 font-mono text-xs tracking-[0.4px]">
             <SignalDot />
             <span>{t('available')}</span>
           </p>
-          <h1 className="text-fg-bright m-0 text-[64px] leading-[0.98] font-medium tracking-[-2px] sm:text-[88px] lg:text-[112px] lg:tracking-[-4px]">
+          <h1 className="text-fg-bright m-0 text-[48px] leading-[0.98] font-medium tracking-[-1.5px] sm:text-[64px] sm:tracking-[-2px] lg:text-[88px] lg:tracking-[-3px]">
             {t('name')}
             <br />
             {t('lastName')}
@@ -65,29 +61,6 @@ export function Hero() {
             </a>
           </div>
         </div>
-
-        {/* Right meta — NOW */}
-        <aside
-          aria-label="now"
-          className="text-mute font-mono text-[11px] lg:max-w-[280px]"
-        >
-          <div className="text-accent">
-            {'// '}
-            {t('nowLabel')}
-          </div>
-          <dl className="text-fg-dim mt-3 leading-[1.8]">
-            {nowKeys.map((key) => (
-              <div key={key} className="flex gap-2">
-                <dt className="text-mute">{key}</dt>
-                <dd>— {t(`now.${key}`)}</dd>
-              </div>
-            ))}
-          </dl>
-          <div className="border-hairline mt-8 border-t pt-4">
-            <div className="text-mute">{t('lastUpdate')}</div>
-            <div className="text-fg-dim mt-1">{t('lastUpdateValue')}</div>
-          </div>
-        </aside>
       </div>
     </section>
   );

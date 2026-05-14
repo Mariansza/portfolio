@@ -7,24 +7,15 @@
     "shortcutLabel": "raccourci"
   },
   "hero": {
-    "available": "disponible — stage fin d'études · CDI · France",
+    "available": "disponible — CDI",
     "name": "Marian",
     "lastName": "Szawelski.",
     "role": "Ingénieur logiciel,",
     "speciality": "spécialisé IA.",
-    "pitch": "Diplômé ingénieur informatique, je construis des produits fullstack où <em>LLM et UX</em> se rencontrent — du prompt au pixel, de la pipeline d'entraînement au composant React.",
+    "pitch": "Je construis des produits fullstack où <em>LLM et UX</em> se rencontrent — du prompt au pixel, du modèle au composant React. L'IA qui sert, pas qui encombre.",
     "ctaProjects": "voir les projets",
     "ctaCV": "télécharger CV.pdf",
-    "indexLabel": "INDEX",
-    "nowLabel": "NOW",
-    "now": {
-      "loc": "Mulhouse, FR",
-      "edu": "ENSISA M2",
-      "exp": "Tessan · GenAI",
-      "tz": "UTC+1"
-    },
-    "lastUpdate": "dernière màj",
-    "lastUpdateValue": "24 avr. 2026 · 14:32"
+    "indexLabel": "INDEX"
   },
   "projects": {
     "label": "projets phares",
@@ -72,7 +63,7 @@
       "ctaLinkedIn": "LinkedIn",
       "channelsLabel": "CHANNELS",
       "locationLabel": "LOCATION",
-      "locationPlace": "Mulhouse, FR",
+      "locationPlace": "Paris, FR",
       "locationMeta": "UTC+1 · mobilité toute la France"
     }
   },
@@ -82,7 +73,7 @@
       "description": "Parcours, formation et conviction de Marian Szawelski, ingénieur informatique spécialisé IA."
     },
     "breadcrumb": "about",
-    "available": "disponible — stage fin d'études · CDI · France",
+    "available": "disponible — CDI",
     "name": "Marian",
     "lastName": "Szawelski.",
     "intro": "Jeune ingénieur informatique fraîchement diplômé, spécialisé IA avec de solides compétences fullstack.",

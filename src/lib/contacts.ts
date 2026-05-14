@@ -21,7 +21,7 @@ export const contactChannels: readonly ContactChannel[] = [
   {
     key: 'linkedin',
     value: 'in/marian-szawelski',
-    href: 'https://www.linkedin.com/in/marian-szawelski',
+    href: 'https://www.linkedin.com/in/marian-szawelski-06b248267/',
     external: true,
   },
   {

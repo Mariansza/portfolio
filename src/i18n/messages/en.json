@@ -7,24 +7,15 @@
     "shortcutLabel": "shortcut"
   },
   "hero": {
-    "available": "available — final-year internship · permanent role · France",
+    "available": "available — permanent role",
     "name": "Marian",
     "lastName": "Szawelski.",
     "role": "Software engineer,",
     "speciality": "AI specialist.",
-    "pitch": "Software engineering graduate building fullstack products where <em>LLMs and UX</em> meet — from prompt to pixel, from training pipeline to React component.",
+    "pitch": "Building fullstack products where <em>LLMs and UX</em> actually meet — from prompt to pixel, from model to React component. AI that serves, not AI that gets in the way.",
     "ctaProjects": "view the work",
     "ctaCV": "download CV.pdf",
-    "indexLabel": "INDEX",
-    "nowLabel": "NOW",
-    "now": {
-      "loc": "Mulhouse, FR",
-      "edu": "ENSISA M2",
-      "exp": "Tessan · GenAI",
-      "tz": "UTC+1"
-    },
-    "lastUpdate": "last update",
-    "lastUpdateValue": "Apr. 24, 2026 · 14:32"
+    "indexLabel": "INDEX"
   },
   "projects": {
     "label": "selected work",
@@ -72,7 +63,7 @@
       "ctaLinkedIn": "LinkedIn",
       "channelsLabel": "CHANNELS",
       "locationLabel": "LOCATION",
-      "locationPlace": "Mulhouse, FR",
+      "locationPlace": "Paris, FR",
       "locationMeta": "UTC+1 · mobile across France"
     }
   },
@@ -82,7 +73,7 @@
       "description": "Background, education, and conviction of Marian Szawelski, AI-focused software engineer."
     },
     "breadcrumb": "about",
-    "available": "available — final-year internship · permanent role · France",
+    "available": "available — permanent role",
     "name": "Marian",
     "lastName": "Szawelski.",
     "intro": "Freshly graduated software engineer specialized in AI, with solid fullstack chops.",
