@@ -3,6 +3,7 @@ import { Inter, JetBrains_Mono } from 'next/font/google';
 import { hasLocale, NextIntlClientProvider } from 'next-intl';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { notFound } from 'next/navigation';
+import { Topbar } from '@/components/Topbar';
 import { routing } from '@/i18n/routing';
 import '../globals.css';
 
@@ -50,7 +51,10 @@ export default async function LocaleLayout({ children, params }: LayoutProps) {
       className={`${inter.variable} ${jetbrainsMono.variable} h-full antialiased`}
     >
       <body className="flex min-h-full flex-col">
-        <NextIntlClientProvider>{children}</NextIntlClientProvider>
+        <NextIntlClientProvider>
+          <Topbar />
+          {children}
+        </NextIntlClientProvider>
       </body>
     </html>
   );

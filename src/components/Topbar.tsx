@@ -1,9 +1,13 @@
-import { Link } from '@/i18n/navigation';
+'use client';
+
+import { Link, usePathname } from '@/i18n/navigation';
 import { navItems } from '@/lib/nav';
 import { LangToggle } from './LangToggle';
 import { SignalDot } from './SignalDot';
 
 export function Topbar() {
+  const pathname = usePathname();
+
   return (
     <header className="border-hairline border-b">
       <div className="text-mute flex flex-wrap items-center justify-between gap-4 px-6 py-6 font-mono text-xs lg:px-14">
@@ -23,25 +27,34 @@ export function Topbar() {
           aria-label="primary"
           className="flex items-center gap-7 text-[13px]"
         >
-          {navItems.map((item) =>
-            item.enabled ? (
+          {navItems.map((item) => {
+            if (!item.enabled) {
+              return (
+                <span
+                  key={item.href}
+                  aria-disabled="true"
+                  className="text-mute-soft cursor-default border-b border-transparent pb-0.5"
+                >
+                  {item.label}
+                </span>
+              );
+            }
+            const isActive = pathname === item.href;
+            return (
               <Link
                 key={item.href}
                 href={item.href}
-                className="text-mute hover:text-fg transition-colors"
+                aria-current={isActive ? 'page' : undefined}
+                className={`border-b pb-0.5 transition-colors ${
+                  isActive
+                    ? 'border-accent text-fg'
+                    : 'text-mute hover:text-fg border-transparent'
+                }`}
               >
                 {item.label}
               </Link>
-            ) : (
-              <span
-                key={item.href}
-                aria-disabled="true"
-                className="text-mute-soft cursor-default"
-              >
-                {item.label}
-              </span>
-            ),
-          )}
+            );
+          })}
         </nav>
         <div className="flex items-center gap-4">
           <LangToggle />

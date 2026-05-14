@@ -4,7 +4,6 @@ import { Footer } from '@/components/Footer';
 import { Hero } from '@/components/Hero';
 import { ProjectsSection } from '@/components/ProjectsSection';
 import { StackSection } from '@/components/StackSection';
-import { Topbar } from '@/components/Topbar';
 
 type Props = {
   params: Promise<{ locale: string }>;
@@ -16,7 +15,6 @@ export default function Home({ params }: Props) {
 
   return (
     <>
-      <Topbar />
       <main className="flex flex-col">
         <Hero />
         <ProjectsSection />
