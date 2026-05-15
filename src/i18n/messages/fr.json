@@ -49,7 +49,7 @@
     "label": "CONTACT",
     "headlineLine1": "Travaillons",
     "headlineLine2": "ensemble.",
-    "pitch": "Stage de fin d'études ou premier CDI, en IA appliquée ou dev fullstack. Je réponds sous 24h.",
+    "pitch": "CDI en IA appliquée ou dev fullstack. Je réponds sous 24h.",
     "metadata": {
       "title": "Contact — Marian Szawelski",
       "description": "Écris-moi via email, LinkedIn ou GitHub. Disponible pour stage / CDI en France, IA appliquée et dev fullstack."
@@ -57,8 +57,8 @@
     "page": {
       "breadcrumb": "contact",
       "available": "réponse sous 24h — la plupart du temps beaucoup plus vite",
-      "headline": "Dis bonjour.",
-      "intro": "Stage de fin d'études, premier CDI, ou simple discussion technique — écris-moi via n'importe lequel de ces canaux. J'aime échanger sur l'IA appliquée, le fullstack, et les produits qui respectent leurs utilisateurs.",
+      "headline": "Parlons ensemble.",
+      "intro": "Je suis joignable sur tous ces canaux.",
       "ctaEmail": "écrire un email",
       "ctaLinkedIn": "LinkedIn",
       "channelsLabel": "CHANNELS",
@@ -89,7 +89,7 @@
       "label": "parcours",
       "prepa": {
         "tag": "prépa",
-        "text": "Bac S, puis deux ans de prépa scientifique — maths, physique, chimie, informatique."
+        "text": "Bac S, puis prépa scientifique CPGE filière PC* - maths, physique, chimie, informatique."
       },
       "ensisa": {
         "tag": "ENSISA",
