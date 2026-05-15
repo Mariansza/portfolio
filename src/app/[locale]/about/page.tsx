@@ -42,11 +42,6 @@ export default function AboutPage({ params }: LocaleParams) {
               {'// '}
               {t('indexLabel')}
             </div>
-            <ul className="mt-3">
-              <li>{t('indexItems.intro')}</li>
-              <li>{t('indexItems.parcours')}</li>
-              <li>{t('indexItems.conviction')}</li>
-            </ul>
           </aside>
 
           <div>
@@ -90,7 +85,7 @@ export default function AboutPage({ params }: LocaleParams) {
         className="border-hairline border-b px-6 py-12 lg:px-14 lg:py-16"
       >
         <div id="parcours-heading">
-          <SectionHeader number="02">{t('parcours.label')}</SectionHeader>
+          <SectionHeader>{t('parcours.label')}</SectionHeader>
         </div>
         <ol className="mt-10 flex flex-col gap-y-7">
           {parcoursIds.map((id) => (
@@ -114,7 +109,7 @@ export default function AboutPage({ params }: LocaleParams) {
         className="px-6 py-12 lg:px-14 lg:py-16"
       >
         <div id="conviction-heading">
-          <SectionHeader number="03">{t('conviction.label')}</SectionHeader>
+          <SectionHeader>{t('conviction.label')}</SectionHeader>
         </div>
         <blockquote className="text-fg-bright mt-10 max-w-[760px] text-2xl leading-[1.4] font-medium tracking-tight lg:text-[30px] lg:leading-[1.3]">
           <span aria-hidden className="text-accent mr-2">

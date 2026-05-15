@@ -81,12 +81,6 @@ export default function CaseStudyPage({ params }: Params) {
               {'// '}
               {tCase('indexLabel')}
             </div>
-            <ul className="mt-3">
-              <li>{tCase('indexItems.context')}</li>
-              <li>{tCase('indexItems.challenge')}</li>
-              <li>{tCase('indexItems.approach')}</li>
-              <li>{tCase('indexItems.outcome')}</li>
-            </ul>
           </aside>
 
           <div>
@@ -127,7 +121,7 @@ export default function CaseStudyPage({ params }: Params) {
         className="border-hairline border-b px-6 py-12 lg:px-14 lg:py-16"
       >
         <div id="context-heading">
-          <SectionHeader number="01">{tCase('context.title')}</SectionHeader>
+          <SectionHeader>{tCase('context.title')}</SectionHeader>
         </div>
         <p className="text-fg-muted mt-10 max-w-[760px] text-base leading-[1.65] lg:text-[17px]">
           {tCase('context.body')}
@@ -140,7 +134,7 @@ export default function CaseStudyPage({ params }: Params) {
         className="border-hairline border-b px-6 py-12 lg:px-14 lg:py-16"
       >
         <div id="challenge-heading">
-          <SectionHeader number="02">{tCase('challenge.title')}</SectionHeader>
+          <SectionHeader>{tCase('challenge.title')}</SectionHeader>
         </div>
         <p className="text-fg-muted mt-10 max-w-[760px] text-base leading-[1.65] lg:text-[17px]">
           {tCase('challenge.intro')}
@@ -169,7 +163,7 @@ export default function CaseStudyPage({ params }: Params) {
         className="border-hairline border-b px-6 py-12 lg:px-14 lg:py-16"
       >
         <div id="approach-heading">
-          <SectionHeader number="03">{tCase('approach.title')}</SectionHeader>
+          <SectionHeader>{tCase('approach.title')}</SectionHeader>
         </div>
         <div className="mt-10 max-w-[760px] space-y-6">
           {approachBlockIds.map((id) => (
@@ -189,7 +183,7 @@ export default function CaseStudyPage({ params }: Params) {
         className="border-hairline border-b px-6 py-12 lg:px-14 lg:py-16"
       >
         <div id="outcome-heading">
-          <SectionHeader number="04">{tCase('outcome.title')}</SectionHeader>
+          <SectionHeader>{tCase('outcome.title')}</SectionHeader>
         </div>
         <p className="text-fg-muted mt-10 max-w-[760px] text-base leading-[1.65] lg:text-[17px]">
           {tCase('outcome.intro')}

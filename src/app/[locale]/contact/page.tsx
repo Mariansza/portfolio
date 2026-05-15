@@ -38,10 +38,6 @@ export default function ContactPage({ params }: LocaleParams) {
             className="text-mute font-mono text-[11px] leading-[1.9]"
           >
             <div className="text-accent">{'// CONTACT'}</div>
-            <ul className="mt-3">
-              <li>01 — message</li>
-              <li>02 — channels</li>
-            </ul>
           </aside>
 
           <div>
@@ -84,8 +80,7 @@ export default function ContactPage({ params }: LocaleParams) {
             className="flex flex-col gap-8 lg:max-w-[380px]"
           >
             <div>
-              <div className="text-mute mb-4 font-mono text-[11px]">
-                <span className="text-accent">02 — </span>
+              <div className="text-accent mb-4 font-mono text-[11px]">
                 {t('channelsLabel')}
               </div>
               <ul className="font-mono text-[13px]">

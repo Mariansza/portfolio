@@ -11,7 +11,7 @@ export function StackSection() {
       className="border-hairline border-b px-6 py-12 lg:px-14"
     >
       <div id="stack-heading">
-        <SectionHeader number="03">{t('label')}</SectionHeader>
+        <SectionHeader>{t('label')}</SectionHeader>
       </div>
       <div className="mt-8 grid grid-cols-2 gap-10 lg:grid-cols-4">
         {stackGroups.map((group) => (

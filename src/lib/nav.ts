@@ -1,6 +1,6 @@
 export type NavItem = {
   label: string;
-  href: '/' | '/about' | '/projects' | '/cv' | '/contact';
+  href: '/about' | '/projects' | '/cv' | '/contact';
   enabled: boolean;
 };
 

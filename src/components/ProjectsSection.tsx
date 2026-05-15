@@ -11,7 +11,7 @@ export function ProjectsSection() {
     <section aria-labelledby="work-heading">
       <div className="border-hairline flex items-baseline justify-between border-b px-6 pt-12 pb-5 lg:px-14">
         <div id="work-heading">
-          <SectionHeader number="02">{t('label')}</SectionHeader>
+          <SectionHeader>{t('label')}</SectionHeader>
         </div>
         <span className="text-mute font-mono text-xs">
           {t('summary')} ·{' '}
@@ -31,8 +31,7 @@ export function ProjectsSection() {
           >
             <article className="grid grid-cols-1 items-start gap-6 px-6 py-9 lg:grid-cols-[80px_1fr_320px] lg:gap-8 lg:px-14">
               <div className="text-mute font-mono text-xs">
-                <div className="text-accent">{project.num}</div>
-                <div className="mt-1.5">{project.year}</div>
+                {project.year}
               </div>
               <div>
                 <h3 className="text-fg-bright m-0 text-2xl font-medium tracking-[-0.6px] lg:text-[32px]">

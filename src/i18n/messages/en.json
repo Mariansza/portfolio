@@ -26,7 +26,7 @@
       "description": "Fullstack and applied AI projects: Tessan AI Marketing in production, U-Net segmentation, ECG classification."
     },
     "page": {
-      "breadcrumb": "projects",
+      "breadcrumb": "work",
       "headline": "Selected work.",
       "intro": "Three projects, from the latest one in production to the foundational academic ones. One detailed case study for now, more to come.",
       "viewCaseStudy": "view case study",
@@ -49,10 +49,10 @@
           "breadcrumb": "tessan",
           "indexLabel": "CASE",
           "indexItems": {
-            "context": "01 — context",
-            "challenge": "02 — challenge",
-            "approach": "03 — approach",
-            "outcome": "04 — outcome"
+            "context": "context",
+            "challenge": "challenge",
+            "approach": "approach",
+            "outcome": "outcome"
           },
           "tagsLabel": "STACK",
           "context": {
@@ -148,9 +148,9 @@
     "intro": "Freshly graduated software engineer specialized in AI, with solid fullstack chops.",
     "indexLabel": "ABOUT",
     "indexItems": {
-      "intro": "01 — who",
-      "parcours": "02 — background",
-      "conviction": "03 — conviction"
+      "intro": "who",
+      "parcours": "background",
+      "conviction": "conviction"
     },
     "photoCaption": "Marian, 2026",
     "photoAlt": "Portrait of Marian Szawelski",

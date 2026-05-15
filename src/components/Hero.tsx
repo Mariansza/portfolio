@@ -2,8 +2,6 @@ import { useTranslations } from 'next-intl';
 import { Link } from '@/i18n/navigation';
 import { SignalDot } from './SignalDot';
 
-const indexEntries = ['01 — hero', '02 — work', '03 — stack', '04 — contact'];
-
 export function Hero() {
   const t = useTranslations('hero');
 
@@ -18,11 +16,6 @@ export function Hero() {
             {'// '}
             {t('indexLabel')}
           </div>
-          <ul className="mt-3">
-            {indexEntries.map((entry) => (
-              <li key={entry}>{entry}</li>
-            ))}
-          </ul>
         </aside>
 
         <div>

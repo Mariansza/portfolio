@@ -1,5 +1,6 @@
 import { useTranslations } from 'next-intl';
 import { contactChannels } from '@/lib/contacts';
+import { SectionHeader } from './SectionHeader';
 
 export function Footer() {
   const t = useTranslations();
@@ -8,10 +9,9 @@ export function Footer() {
     <footer className="px-6 pt-14 pb-10 lg:px-14">
       <div className="grid grid-cols-1 gap-12 lg:grid-cols-2">
         <div>
-          <p className="text-mute mb-3.5 font-mono text-[11px]">
-            <span className="text-accent">04 — </span>
-            {t('contact.label')}
-          </p>
+          <div className="mb-3.5">
+            <SectionHeader>{t('contact.label')}</SectionHeader>
+          </div>
           <h2 className="text-fg-bright m-0 text-[40px] leading-[1.05] font-medium tracking-[-1.2px] lg:text-[44px]">
             {t('contact.headlineLine1')}
             <br />
