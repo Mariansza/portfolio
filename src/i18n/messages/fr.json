@@ -23,8 +23,8 @@
     "viewAll": "voir tous",
     "items": {
       "tessan": {
-        "title": "Stage Tessan — GenAI × fullstack",
-        "pitch": "Intégration de workflows LLM dans l'app santé de Tessan. Back Python, front React, évaluation de prompts et de modèles. Pipelines d'inférence, guardrails, et interfaces patient."
+        "title": "Tessan IA Marketing — plateforme de génération",
+        "pitch": "Plateforme interne de génération marketing pour Tessan, déployée en production. RAG sur pgvector + orchestration de 9 modèles (GPT-4o, Imagen, Veo, HeyGen) pour produire texte, image et vidéo cohérents avec la marque. Autopilot de planification, validation humaine, publication Facebook/Instagram intégrée. Build solo."
       },
       "unet": {
         "title": "Segmentation de bâtiments — U-Net",

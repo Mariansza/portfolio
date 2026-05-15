@@ -12,7 +12,7 @@ export const projects: readonly Project[] = [
     id: 'tessan',
     num: '01',
     year: '2025',
-    tags: ['Python', 'React', 'LLM', 'FastAPI', 'Postgres'],
+    tags: ['Python', 'Next.js', 'FastAPI', 'pgvector', 'RAG', 'GCP'],
   },
   {
     id: 'unet',

@@ -6,11 +6,11 @@ export type StackGroup = {
 };
 
 export const stackGroups: readonly StackGroup[] = [
-  { id: 'langages', items: ['Python', 'TypeScript', 'Java', 'C++', 'SQL'] },
+  { id: 'langages', items: ['Python', 'TypeScript', 'JavaScript', 'SQL'] },
   { id: 'web', items: ['React', 'Next.js', 'FastAPI', 'Node', 'Tailwind'] },
   {
     id: 'ml',
     items: ['PyTorch', 'TensorFlow', 'scikit-learn', 'OpenCV', 'Transformers'],
   },
-  { id: 'ops', items: ['Docker', 'Git', 'Postgres', 'Linux', 'Vercel'] },
+  { id: 'ops', items: ['Docker', 'Postgres', 'Linux', 'Vercel', 'GCP'] },
 ];

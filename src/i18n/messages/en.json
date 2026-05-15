@@ -23,8 +23,8 @@
     "viewAll": "view all",
     "items": {
       "tessan": {
-        "title": "Tessan internship — GenAI × fullstack",
-        "pitch": "Integrating LLM workflows into Tessan's healthcare app. Python backend, React frontend, prompt and model evaluation. Inference pipelines, guardrails, patient-facing interfaces."
+        "title": "Tessan AI Marketing — content generation platform",
+        "pitch": "In-production AI marketing platform for Tessan. RAG on pgvector + orchestration of 9 AI models (GPT-4o, Imagen, Veo, HeyGen) generating text, image and video while preserving brand voice. Autopilot scheduling, human-in-the-loop, Meta publishing. Solo build."
       },
       "unet": {
         "title": "Building footprint segmentation — U-Net",
