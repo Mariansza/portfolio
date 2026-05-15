@@ -1,4 +1,5 @@
 import { useTranslations } from 'next-intl';
+import { Link } from '@/i18n/navigation';
 import { projects } from '@/lib/projects';
 import { SectionHeader } from './SectionHeader';
 import { Tag } from './Tag';
@@ -13,7 +14,13 @@ export function ProjectsSection() {
           <SectionHeader number="02">{t('label')}</SectionHeader>
         </div>
         <span className="text-mute font-mono text-xs">
-          {t('summary')} · {t('viewAll')} →
+          {t('summary')} ·{' '}
+          <Link
+            href="/projects"
+            className="hover:text-fg-bright transition-colors"
+          >
+            {t('viewAll')} →
+          </Link>
         </span>
       </div>
       <ul>

@@ -19,12 +19,81 @@
   },
   "projects": {
     "label": "selected work",
-    "summary": "3 / 11",
+    "summary": "3 projects",
     "viewAll": "view all",
+    "metadata": {
+      "title": "Projects — Marian Szawelski",
+      "description": "Fullstack and applied AI projects: Tessan AI Marketing in production, U-Net segmentation, ECG classification."
+    },
+    "page": {
+      "breadcrumb": "projects",
+      "headline": "Selected work.",
+      "intro": "Three projects, from the latest one in production to the foundational academic ones. One detailed case study for now, more to come.",
+      "viewCaseStudy": "view case study",
+      "comingSoon": "case study coming soon",
+      "status": {
+        "production": "in production",
+        "completed": "completed",
+        "archived": "archived"
+      }
+    },
     "items": {
       "tessan": {
         "title": "Tessan AI Marketing — content generation platform",
-        "pitch": "In-production AI marketing platform for Tessan. RAG on pgvector + orchestration of 9 AI models (GPT-4o, Imagen, Veo, HeyGen) generating text, image and video while preserving brand voice. Autopilot scheduling, human-in-the-loop, Meta publishing. Solo build."
+        "pitch": "In-production AI marketing platform for Tessan. RAG on pgvector + orchestration of 9 AI models (GPT-4o, Imagen, Veo, HeyGen) generating text, image and video while preserving brand voice. Autopilot scheduling, human-in-the-loop, Meta publishing. Solo build.",
+        "caseStudy": {
+          "metadata": {
+            "title": "Tessan AI Marketing — case study — Marian Szawelski",
+            "description": "Solo design and build of an in-production AI marketing platform: pgvector RAG, orchestration of 9 models, autopilot, Meta publishing."
+          },
+          "breadcrumb": "tessan",
+          "indexLabel": "CASE",
+          "indexItems": {
+            "context": "01 — context",
+            "challenge": "02 — challenge",
+            "approach": "03 — approach",
+            "outcome": "04 — outcome"
+          },
+          "tagsLabel": "STACK",
+          "context": {
+            "title": "context",
+            "body": "Tessan is a French telemedicine company: kiosks, cabins, and teleconsultation tables deployed in pharmacies. The marketing team needs to publish regularly on Facebook and Instagram while honoring a strong brand book: credible medical tone, core values (\"technology serves care, never the other way around\"), and visual consistency of real products that must appear identical on every visual. Sustaining this level of rigor at a steady publishing cadence is time-consuming — social media is the first task to be sacrificed under pressure. The CEO asked me to design and build, solo, an internal AI-driven marketing automation platform."
+          },
+          "challenge": {
+            "title": "challenge",
+            "intro": "The problem isn't generating content — it's producing content that sounds like Tessan. Honoring the editorial restrictions, the credible medical framing, and zero product hallucinations — no \"compact kiosk\" or \"Tessan Pro\" invented by the model.",
+            "objectivesLabel": "Goals set:",
+            "objectives": [
+              "Multi-format generation (text, image, video) with brand consistency guaranteed by a knowledge base",
+              "Automated weekly content scheduling",
+              "Systematic human validation before publishing",
+              "Direct publishing to Meta from within the app",
+              "Restricted access to the marketing team (Google SSO + email allowlist)"
+            ]
+          },
+          "approach": {
+            "title": "approach",
+            "blocks": {
+              "arch": "<strong>Three-tier architecture.</strong> Next.js 15 frontend (static export) on Firebase Hosting, async FastAPI backend on Cloud Run, Postgres + pgvector on Cloud SQL. The backend acts as a secure proxy — no secret (OpenAI, Meta, HeyGen) ever reaches the browser.",
+              "rag": "<strong>RAG on pgvector</strong> as the technical core. Ingestion of PDF, DOCX, and — crucially — images: GPT-4o Vision describes every visual (products, brand book, past posts) with a prompt specialized per collection. Embeddings via text-embedding-3-small (1536 dim.). Cosine-distance search with a boost on chunks validated by user feedback — the system aligns over time with what the team considers good.",
+              "orchestration": "<strong>Orchestration of 9 AI models.</strong> GPT-4o (text + Vision), Imagen 4 + Nano Banana 2 (image), Veo 3.1 (video), HeyGen v2 (talking avatar).",
+              "autoDetect": "<strong>Key innovation — product auto-detection.</strong> GPT-4o and Imagen, left to their own devices, invent Tessan product variants: \"compact kiosk\", \"Tessan Pro\", terminals that have never existed. I built a keyword-matching module (with Unicode normalization for French) over the 7 real products pre-registered in the database. When a product is detected in the user's description, silent switch from Imagen 4 to Nano Banana 2 with injection of reference photos (up to 14 simultaneously) and an explicit instruction: \"NO modification, NO variant invention\". Zero product hallucination, zero technical choice asked of the user.",
+              "humanLoop": "<strong>Human-in-the-loop, two phases</strong> on heavy workflows (carousels, video). Phase 1: a single GPT-4o call produces an editable plan. Phase 2: the expensive generation only runs once the plan is validated. Avoids burning credits if the model goes down the wrong path. 10-slide carousel in ~1 min (vs 5 min sequential).",
+              "autopilot": "<strong>Autopilot</strong> — the most complex module. The team defines weekly slots, feeds a topic pool (manual or GPT-4o suggested), and only intervenes at validation. 9-state workflow, traceable batches, dual authentication (manual JWT or shared secret for Cloud Scheduler triggers).",
+              "meta": "<strong>Meta publishing</strong> via Graph API v21.0 — feature flags, double-publishing protection, full traceability."
+            }
+          },
+          "outcome": {
+            "title": "outcome",
+            "intro": "Deployed in production on GCP. Used daily by the Tessan marketing team.",
+            "blocks": {
+              "impact": "<strong>Measurable impact.</strong> A simple piece of content takes minutes (vs the full manual cycle: writing, validation, visual creation, per-platform variants, publishing). Avatar video in 2 to 10 minutes. Brand consistency guaranteed by the RAG. Complete traceability: every generation timestamped with its prompt, RAG chunks, model, and publish status.",
+              "scale": "<strong>Scale.</strong> 13 Postgres tables · 28 API endpoints · ~120 unit tests · 9 AI models orchestrated.",
+              "build": "<strong>Solo build, end-to-end.</strong> Design, backend dev (FastAPI + RAG + orchestration), frontend dev (Next.js), GCP infra, deployment, handover. From the first line of code to production."
+            }
+          },
+          "backToList": "all projects"
+        }
       },
       "unet": {
         "title": "Building footprint segmentation — U-Net",

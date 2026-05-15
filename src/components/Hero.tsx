@@ -1,4 +1,5 @@
 import { useTranslations } from 'next-intl';
+import { Link } from '@/i18n/navigation';
 import { SignalDot } from './SignalDot';
 
 const indexEntries = ['01 — hero', '02 — work', '03 — stack', '04 — contact'];
@@ -46,13 +47,13 @@ export function Hero() {
             })}
           </p>
           <div className="mt-14 flex flex-wrap gap-3 font-mono text-[13px]">
-            <span
-              aria-disabled="true"
-              className="border-mute-soft text-mute-soft inline-flex cursor-default items-center gap-2 rounded border px-5 py-3 font-semibold"
+            <Link
+              href="/projects"
+              className="border-mute-soft text-fg hover:border-mute hover:text-fg-bright inline-flex items-center gap-2 rounded border px-5 py-3 font-semibold transition-colors"
             >
               <span aria-hidden>→</span>
               <span>{t('ctaProjects')}</span>
-            </span>
+            </Link>
             <a
               href="/marian-szawelski-cv.pdf"
               className="border-mute-soft text-fg hover:border-mute hover:text-fg-bright inline-flex items-center gap-2 rounded border px-5 py-3 transition-colors"

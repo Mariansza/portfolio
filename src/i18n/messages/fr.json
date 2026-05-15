@@ -19,12 +19,81 @@
   },
   "projects": {
     "label": "projets phares",
-    "summary": "3 / 11",
+    "summary": "3 projets",
     "viewAll": "voir tous",
+    "metadata": {
+      "title": "Projets — Marian Szawelski",
+      "description": "Projets fullstack et IA appliquée : Tessan IA Marketing en production, segmentation U-Net, classification ECG."
+    },
+    "page": {
+      "breadcrumb": "projects",
+      "headline": "Sélection.",
+      "intro": "Trois projets, du dernier en production jusqu'aux travaux académiques fondateurs. Un case study détaillé pour l'instant, les autres viendront.",
+      "viewCaseStudy": "voir le case study",
+      "comingSoon": "case study à venir",
+      "status": {
+        "production": "en production",
+        "completed": "livré",
+        "archived": "archivé"
+      }
+    },
     "items": {
       "tessan": {
         "title": "Tessan IA Marketing — plateforme de génération",
-        "pitch": "Plateforme interne de génération marketing pour Tessan, déployée en production. RAG sur pgvector + orchestration de 9 modèles (GPT-4o, Imagen, Veo, HeyGen) pour produire texte, image et vidéo cohérents avec la marque. Autopilot de planification, validation humaine, publication Facebook/Instagram intégrée. Build solo."
+        "pitch": "Plateforme interne de génération marketing pour Tessan, déployée en production. RAG sur pgvector + orchestration de 9 modèles (GPT-4o, Imagen, Veo, HeyGen) pour produire texte, image et vidéo cohérents avec la marque. Autopilot de planification, validation humaine, publication Facebook/Instagram intégrée. Build solo.",
+        "caseStudy": {
+          "metadata": {
+            "title": "Tessan IA Marketing — case study — Marian Szawelski",
+            "description": "Conception et build solo d'une plateforme IA de génération marketing déployée en production : RAG pgvector, orchestration de 9 modèles, autopilot, publication Meta."
+          },
+          "breadcrumb": "tessan",
+          "indexLabel": "CASE",
+          "indexItems": {
+            "context": "01 — context",
+            "challenge": "02 — challenge",
+            "approach": "03 — approach",
+            "outcome": "04 — outcome"
+          },
+          "tagsLabel": "STACK",
+          "context": {
+            "title": "context",
+            "body": "Tessan est une entreprise française de télémédecine : bornes, cabines, et tables de téléconsultation déployées en pharmacie. L'équipe marketing doit publier régulièrement sur Facebook et Instagram en respectant une charte forte : ton médical crédible, valeurs (« la technologie sert le soin, jamais l'inverse »), et cohérence visuelle des produits réels qui doivent apparaître à l'identique sur chaque visuel. Maintenir ce niveau d'exigence sur un rythme de publication soutenu est chronophage — la communication réseaux est la première tâche sacrifiée sous pression. Le CEO m'a confié seul la conception et le développement d'une plateforme interne d'automatisation marketing par IA."
+          },
+          "challenge": {
+            "title": "challenge",
+            "intro": "Le problème n'est pas de générer du contenu, c'est de produire du contenu qui sonne Tessan. Respect des interdits rédactionnels, cadre médical crédible, et zéro hallucination de produits — pas de « borne compacte » ou « Tessan Pro » inventés par le modèle.",
+            "objectivesLabel": "Objectifs fixés :",
+            "objectives": [
+              "Génération multi-format (texte, image, vidéo) avec garantie de cohérence de marque via une base de connaissances",
+              "Planification automatisée des publications hebdomadaires",
+              "Validation humaine systématique avant diffusion",
+              "Publication directe sur Meta depuis l'application",
+              "Accès restreint à l'équipe marketing (SSO Google + liste blanche)"
+            ]
+          },
+          "approach": {
+            "title": "approach",
+            "blocks": {
+              "arch": "<strong>Architecture trois étages.</strong> Frontend Next.js 15 exporté statique sur Firebase Hosting, backend FastAPI async sur Cloud Run, Postgres + pgvector sur Cloud SQL. Le backend joue proxy sécurisé — aucun secret (OpenAI, Meta, HeyGen) ne touche le navigateur.",
+              "rag": "<strong>RAG sur pgvector</strong> comme cœur technique. Ingestion de PDF, DOCX, et — clé — images : GPT-4o Vision décrit chaque visuel (produits, charte, anciens posts) avec un prompt spécialisé par collection. Embeddings text-embedding-3-small (1536 dim.). Recherche par distance cosinus avec boost des chunks validés par feedback utilisateur — le système s'aligne au fil du temps sur ce que l'équipe considère bon.",
+              "orchestration": "<strong>Orchestration de 9 modèles IA.</strong> GPT-4o (texte + Vision), Imagen 4 + Nano Banana 2 (image), Veo 3.1 (vidéo), HeyGen v2 (avatar parlant).",
+              "autoDetect": "<strong>Innovation clé — auto-détection produit.</strong> GPT-4o et Imagen, laissés libres, inventent des variantes de produits Tessan : « borne compacte », « Tessan Pro », terminaux qui n'ont jamais existé. J'ai développé un module de détection par mots-clés (avec normalisation Unicode pour le français) sur les 7 produits réels pré-enregistrés en base. Quand un produit est détecté dans la description, bascule silencieuse de Imagen 4 vers Nano Banana 2 avec injection des photos de référence (jusqu'à 14 simultanées) et instruction explicite « AUCUNE modification, AUCUNE invention de variante ». Zéro hallucination produit, zéro choix technique demandé à l'utilisateur.",
+              "humanLoop": "<strong>Human-in-the-loop en deux phases</strong> sur les workflows lourds (carrousel, vidéo). Phase 1 : un appel GPT-4o produit un plan éditable. Phase 2 : génération coûteuse uniquement après validation. Évite le gaspillage de crédits si le modèle part sur une fausse piste. Carrousel de 10 slides en ~1 min (vs 5 min en séquentiel).",
+              "autopilot": "<strong>Autopilot</strong> — module le plus complexe. L'équipe définit ses créneaux hebdomadaires, alimente un pool de sujets (manuels ou suggérés par GPT-4o), et n'intervient qu'à la validation. Workflow à 9 états, batchs traçables, authentification duale (JWT manuel ou secret partagé pour déclenchement Cloud Scheduler).",
+              "meta": "<strong>Publication Meta</strong> via Graph API v21.0 — feature flags, protection double-publication, traçabilité complète."
+            }
+          },
+          "outcome": {
+            "title": "outcome",
+            "intro": "Déployé en production sur GCP. Utilisé quotidiennement par l'équipe marketing Tessan.",
+            "blocks": {
+              "impact": "<strong>Impact mesurable.</strong> Production d'un contenu simple en quelques minutes (vs cycle manuel complet : rédaction, validation, création visuelle, déclinaison par plateforme, publication). Vidéo avatar en 2 à 10 minutes. Cohérence de marque garantie par le RAG. Traçabilité complète : chaque génération horodatée avec son prompt, ses chunks RAG, son modèle, son statut.",
+              "scale": "<strong>Échelle.</strong> 13 tables Postgres · 28 endpoints API · ~120 tests unitaires · 9 modèles IA orchestrés.",
+              "build": "<strong>Solo build, end-to-end.</strong> Conception, dev backend (FastAPI + RAG + orchestration), dev frontend (Next.js), infra GCP, déploiement, passation. De la première ligne à la mise en production."
+            }
+          },
+          "backToList": "tous les projets"
+        }
       },
       "unet": {
         "title": "Segmentation de bâtiments — U-Net",
