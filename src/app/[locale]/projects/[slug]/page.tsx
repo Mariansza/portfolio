@@ -69,7 +69,10 @@ export default function CaseStudyPage({ params }: Params) {
 
   return (
     <>
-      <Breadcrumb items={['~', tPage('breadcrumb'), tCase('breadcrumb')]} />
+      <Breadcrumb
+        items={['~', tPage('breadcrumb'), tCase('breadcrumb')]}
+        backHref="/projects"
+      />
 
       <section className="border-hairline border-b px-6 pt-16 pb-16 lg:px-14 lg:pt-20 lg:pb-20">
         <div className="grid grid-cols-1 gap-12 lg:grid-cols-[140px_1fr_280px]">
