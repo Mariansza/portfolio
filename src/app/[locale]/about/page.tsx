@@ -49,10 +49,8 @@ export default function AboutPage({ params }: LocaleParams) {
               <SignalDot />
               <span>{t('available')}</span>
             </p>
-            <h1 className="text-fg-bright m-0 text-[56px] leading-[0.98] font-medium tracking-[-1.5px] sm:text-[72px] lg:text-[84px] lg:tracking-[-3px]">
-              {t('name')}
-              <br />
-              {t('lastName')}
+            <h1 className="text-fg-bright m-0 text-[32px] leading-[1.1] font-medium tracking-[-0.8px] sm:text-[38px] lg:text-[44px] lg:tracking-[-1px]">
+              {t('name')} {t('lastName')}
             </h1>
             <p className="text-fg-muted mt-6 max-w-[540px] text-lg leading-[1.55] lg:text-[20px]">
               {t('intro')}
