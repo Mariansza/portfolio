@@ -1,9 +1,11 @@
 import { useTranslations } from 'next-intl';
+import { Link } from '@/i18n/navigation';
 import { contactChannels } from '@/lib/contacts';
 import { SectionHeader } from './SectionHeader';
 
 export function Footer() {
   const t = useTranslations();
+  const emailChannel = contactChannels.find((c) => c.key === 'email');
 
   return (
     <footer className="px-6 pt-14 pb-10 lg:px-14">
@@ -21,29 +23,24 @@ export function Footer() {
             {t('contact.pitch')}
           </p>
         </div>
-        <ul className="self-end font-mono text-[13px]">
-          {contactChannels.map((channel) => (
-            <li key={channel.key}>
-              <a
-                href={channel.href}
-                target={channel.external ? '_blank' : undefined}
-                rel={channel.external ? 'noopener noreferrer' : undefined}
-                className="group border-hairline hover:bg-fg/[0.02] flex items-center justify-between border-b py-3 transition-colors"
-              >
-                <span className="text-mute">{channel.key}</span>
-                <span className="text-fg">
-                  {channel.value}
-                  <span
-                    aria-hidden
-                    className="text-accent ml-1.5 inline-block transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
-                  >
-                    ↗
-                  </span>
-                </span>
-              </a>
-            </li>
-          ))}
-        </ul>
+        <div className="flex flex-col items-start gap-4 self-end font-mono text-[13px]">
+          {emailChannel && (
+            <a
+              href={emailChannel.href}
+              className="bg-accent text-bg inline-flex items-center gap-2 rounded px-5 py-3 font-semibold transition-opacity hover:opacity-90"
+            >
+              <span aria-hidden>→</span>
+              <span>{t('contact.ctaPrimary')}</span>
+            </a>
+          )}
+          <Link
+            href="/contact"
+            className="text-mute hover:text-fg-bright inline-flex items-center gap-1.5 transition-colors"
+          >
+            <span>{t('contact.ctaAllChannels')}</span>
+            <span aria-hidden>→</span>
+          </Link>
+        </div>
       </div>
       <div className="border-hairline text-mute mt-16 flex flex-wrap items-center justify-between gap-2 border-t pt-6 font-mono text-[11px]">
         <span>{t('footer.signature')}</span>

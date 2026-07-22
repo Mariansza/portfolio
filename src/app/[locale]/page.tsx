@@ -1,5 +1,6 @@
 import { use } from 'react';
 import { setRequestLocale } from 'next-intl/server';
+import { AboutTeaser } from '@/components/AboutTeaser';
 import { Footer } from '@/components/Footer';
 import { Hero } from '@/components/Hero';
 import { ProjectsSection } from '@/components/ProjectsSection';
@@ -18,6 +19,7 @@ export default function Home({ params }: Props) {
       <main className="flex flex-col">
         <Hero />
         <ProjectsSection />
+        <AboutTeaser />
         <StackSection />
       </main>
       <Footer />

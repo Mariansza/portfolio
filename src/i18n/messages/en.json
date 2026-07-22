@@ -105,6 +105,11 @@
       }
     }
   },
+  "aboutTeaser": {
+    "label": "about",
+    "text": "From prep school to ENSISA, with a final year of studies in Japan. Final-year internship as AI project lead at Tessan. Now looking for a first permanent role in France.",
+    "cta": "full journey"
+  },
   "stack": {
     "label": "stack",
     "groups": {
@@ -119,6 +124,8 @@
     "headlineLine1": "Let's build",
     "headlineLine2": "together.",
     "pitch": "Permanent role, applied AI or fullstack. I reply within 24h.",
+    "ctaPrimary": "write me",
+    "ctaAllChannels": "all the ways to reach me",
     "metadata": {
       "title": "Contact — Marian Szawelski",
       "description": "Reach me via email, LinkedIn or GitHub. Open to internship / permanent role in France, applied AI and fullstack."

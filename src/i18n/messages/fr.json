@@ -105,6 +105,11 @@
       }
     }
   },
+  "aboutTeaser": {
+    "label": "about",
+    "text": "Issu de prépa scientifique, diplômé de l'ENSISA, dernière année d'études au Japon. Stage de fin d'études comme chef de projet IA chez Tessan. Je cherche un premier CDI en France.",
+    "cta": "parcours complet"
+  },
   "stack": {
     "label": "stack",
     "groups": {
@@ -119,6 +124,8 @@
     "headlineLine1": "Travaillons",
     "headlineLine2": "ensemble.",
     "pitch": "CDI en IA appliquée ou dev fullstack. Je réponds sous 24h.",
+    "ctaPrimary": "écrivez-moi",
+    "ctaAllChannels": "tous les moyens de me contacter",
     "metadata": {
       "title": "Contact — Marian Szawelski",
       "description": "Écris-moi via email, LinkedIn ou GitHub. Disponible pour stage / CDI en France, IA appliquée et dev fullstack."
@@ -145,7 +152,7 @@
     "available": "disponible — CDI",
     "name": "Marian",
     "lastName": "Szawelski.",
-    "intro": "Jeune ingénieur informatique fraîchement diplômé, spécialisé IA avec de solides compétences fullstack.",
+    "intro": "Jeune ingénieur informatique diplômé, spécialisé IA avec de solides compétences fullstack.",
     "indexLabel": "ABOUT",
     "indexItems": {
       "intro": "qui",
@@ -175,7 +182,7 @@
     },
     "conviction": {
       "label": "conviction",
-      "body": "Je crois en une IA qui sert et augmente l'humain — pas une qui le remplace. C'est cette conviction qui guide ce que je veux construire. Prêt à mettre mes compétences au service de produits qui en valent la peine."
+      "body": "Je crois en une IA qui sert et augmente l'humain, pas une qui le remplace. C'est cette conviction qui guide ce que je veux construire. Prêt à mettre mes compétences au service de produits qui en valent la peine."
     }
   },
   "footer": {

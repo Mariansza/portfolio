@@ -8,6 +8,7 @@ export type Project = {
   year: string;
   tags: readonly string[];
   caseStudyReady: boolean;
+  featured: boolean;
   status: ProjectStatus;
   liveUrl?: string;
   repoUrl?: string;
@@ -20,6 +21,7 @@ export const projects: readonly Project[] = [
     year: '2026',
     tags: ['Python', 'Next.js', 'FastAPI', 'pgvector', 'RAG', 'GCP'],
     caseStudyReady: true,
+    featured: true,
     status: 'production',
   },
   {
@@ -28,6 +30,7 @@ export const projects: readonly Project[] = [
     year: '2025',
     tags: ['Keras', 'TensorFlow', 'OpenCV', 'U-Net'],
     caseStudyReady: false,
+    featured: true,
     status: 'completed',
   },
   {
@@ -36,6 +39,7 @@ export const projects: readonly Project[] = [
     year: '2024',
     tags: ['PyTorch', 'Signal', 'MLP', 'CNN', 'RNN'],
     caseStudyReady: false,
+    featured: false,
     status: 'completed',
   },
 ];
