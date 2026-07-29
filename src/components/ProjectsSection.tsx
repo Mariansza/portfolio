@@ -9,7 +9,7 @@ export function ProjectsSection() {
 
   return (
     <section aria-labelledby="work-heading">
-      <div className="border-hairline border-b px-6 pt-12 pb-5 lg:px-14">
+      <div className="px-6 pt-12 pb-5 lg:px-14">
         <div id="work-heading">
           <SectionHeader>{t('label')}</SectionHeader>
         </div>

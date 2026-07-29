@@ -10,6 +10,34 @@
   --color-mute-soft: #3a3b38;
   --color-hairline: #1c1e1a;
   --color-accent: #8cff4a;
+  --animate-blink: blink 1s steps(1) infinite;
+  --animate-chip-sweep: chip-sweep 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes blink {
+  0%,
+  49% {
+    opacity: 1;
+  }
+  50%,
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes chip-sweep {
+  0% {
+    width: 0%;
+    opacity: 1;
+  }
+  70% {
+    width: 100%;
+    opacity: 1;
+  }
+  100% {
+    width: 100%;
+    opacity: 0;
+  }
 }
 
 @theme inline {

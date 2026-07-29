@@ -28,7 +28,7 @@
     "page": {
       "breadcrumb": "work",
       "headline": "Sélection.",
-      "intro": "Trois projets, du dernier en production jusqu'aux travaux académiques fondateurs. Un case study détaillé pour l'instant, les autres viendront.",
+      "intro": "Trois projets, du dernier en production jusqu'aux travaux académiques fondateurs. Un case study détaillé pour l'instant, d'autres projets seront bientôt ajoutés à la liste.",
       "viewCaseStudy": "voir le case study",
       "comingSoon": "case study à venir",
       "status": {
@@ -101,7 +101,7 @@
       },
       "ecg": {
         "title": "Classification ECG — MLP · CNN · RNN",
-        "pitch": "Détection d'infarctus sur signaux ECG. Trois architectures comparées, optimisation d'hyperparamètres, livrable pour un service de cardiologie."
+        "pitch": "Détection d'infarctus sur signaux ECG. Trois architectures comparées, optimisation d'hyperparamètres."
       }
     }
   },
