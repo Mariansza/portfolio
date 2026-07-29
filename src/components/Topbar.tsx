@@ -31,7 +31,7 @@ export function Topbar() {
 
   return (
     <header className="border-hairline border-b">
-      <div className="text-mute flex flex-wrap items-center justify-between gap-4 px-6 py-6 font-mono text-xs lg:px-14">
+      <div className="text-mute flex flex-wrap items-center justify-between gap-4 px-6 py-6 font-mono text-sm sm:text-xs lg:px-14">
         <div className="flex items-center gap-2.5">
           <SignalDot />
           <span className="text-fg">marian.szawelski</span>
@@ -40,12 +40,12 @@ export function Topbar() {
         </div>
         <nav
           aria-label="primary"
-          className="flex flex-wrap items-center gap-1.5 text-xs sm:gap-2 sm:text-[13px]"
+          className="flex flex-wrap items-center gap-2 text-sm sm:text-[13px]"
         >
           <Link
             href="/"
             aria-current={pathname === '/' ? 'page' : undefined}
-            className={`relative inline-flex items-center overflow-hidden rounded-[3px] border px-2.5 py-1 transition-colors active:scale-95 sm:px-3 sm:py-1.5 ${
+            className={`relative inline-flex items-center overflow-hidden rounded-[3px] border px-3 py-1.5 transition-colors active:scale-95 ${
               pathname === '/'
                 ? 'border-accent/45 bg-accent/[0.08] text-fg-bright'
                 : 'border-mute-soft bg-fg/[0.03] text-mute hover:border-mute hover:bg-fg/[0.06] hover:text-fg-bright'
@@ -54,8 +54,6 @@ export function Topbar() {
             <ActivationSweep active={pathname === '/'} />
             <span className="relative z-10 inline-flex items-center gap-1.5">
               <svg
-                width="14"
-                height="14"
                 viewBox="0 0 24 24"
                 fill="none"
                 stroke="currentColor"
@@ -63,6 +61,7 @@ export function Topbar() {
                 strokeLinecap="round"
                 strokeLinejoin="round"
                 aria-hidden="true"
+                className="h-4 w-4 sm:h-3.5 sm:w-3.5"
               >
                 <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
                 <polyline points="9 22 9 12 15 12 15 22" />
@@ -82,7 +81,7 @@ export function Topbar() {
                 <span
                   key={item.href}
                   aria-disabled="true"
-                  className="text-mute-soft cursor-default px-2.5 py-1 sm:px-3 sm:py-1.5"
+                  className="text-mute-soft cursor-default px-3 py-1.5"
                 >
                   {item.label}
                 </span>
@@ -94,7 +93,7 @@ export function Topbar() {
                 key={item.href}
                 href={item.href}
                 aria-current={isActive ? 'page' : undefined}
-                className={`group relative inline-flex items-center overflow-hidden rounded-[3px] border px-2.5 py-1 transition-colors active:scale-95 sm:px-3 sm:py-1.5 ${
+                className={`group relative inline-flex items-center overflow-hidden rounded-[3px] border px-3 py-1.5 transition-colors active:scale-95 ${
                   isActive
                     ? 'border-accent/45 bg-accent/[0.08] text-fg-bright'
                     : 'border-mute-soft bg-fg/[0.03] text-mute hover:border-mute hover:bg-fg/[0.06] hover:text-fg-bright'

@@ -10,7 +10,7 @@ export function LangToggle() {
     target === locale ? 'text-fg' : 'text-mute transition-colors hover:text-fg';
 
   return (
-    <span className="font-mono text-xs" aria-label="language">
+    <span className="font-mono text-sm sm:text-xs" aria-label="language">
       <Link href={pathname} locale="fr" className={cls('fr')}>
         FR
       </Link>
