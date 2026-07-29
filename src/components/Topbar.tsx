@@ -71,7 +71,11 @@ export function Topbar() {
               <ActiveCursor active={pathname === '/'} />
             </span>
           </Link>
-          <span aria-hidden className="bg-hairline mx-0.5 h-5 w-px sm:mx-1" />
+          <span
+            aria-hidden
+            className="bg-hairline hidden h-5 w-px sm:mx-1 sm:block"
+          />
+          <span aria-hidden className="basis-full sm:hidden" />
           {navItems.map((item) => {
             if (!item.enabled) {
               return (
