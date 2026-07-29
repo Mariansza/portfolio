@@ -16,7 +16,7 @@ export function AboutTeaser() {
         </p>
         <Link
           href="/about"
-          className="text-mute hover:text-fg-bright mt-6 inline-flex items-center gap-1.5 font-mono text-[13px] transition-colors"
+          className="text-mute hover:text-fg-bright mt-6 inline-flex items-center gap-1.5 py-1 -my-1 font-mono text-[13px] transition-colors"
         >
           <span>{t('cta')}</span>
           <span aria-hidden>→</span>

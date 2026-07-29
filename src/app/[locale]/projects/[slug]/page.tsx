@@ -206,7 +206,7 @@ export default function CaseStudyPage({ params }: Params) {
       <nav aria-label="back" className="px-6 py-10 lg:px-14">
         <Link
           href="/projects"
-          className="text-mute hover:text-fg-bright font-mono text-[13px] transition-colors"
+          className="text-mute hover:text-fg-bright inline-flex items-center py-1 -my-1 font-mono text-[13px] underline underline-offset-4 decoration-1 transition-colors"
         >
           <span aria-hidden>← </span>
           {tCase('backToList')}

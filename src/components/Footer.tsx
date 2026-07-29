@@ -35,7 +35,7 @@ export function Footer() {
           )}
           <Link
             href="/contact"
-            className="text-mute hover:text-fg-bright inline-flex items-center gap-1.5 transition-colors"
+            className="text-mute hover:text-fg-bright inline-flex items-center gap-1.5 py-1 -my-1 transition-colors"
           >
             <span>{t('contact.ctaAllChannels')}</span>
             <span aria-hidden>→</span>
