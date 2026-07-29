@@ -20,7 +20,7 @@
   "projects": {
     "label": "projets phares",
     "summary": "3 projets",
-    "viewAll": "voir tous",
+    "viewAll": "Voir tous les projets",
     "metadata": {
       "title": "Projets — Marian Szawelski",
       "description": "Projets fullstack et IA appliquée : Tessan IA Marketing en production, segmentation U-Net, classification ECG."
@@ -108,7 +108,7 @@
   "aboutTeaser": {
     "label": "about",
     "text": "Issu de prépa scientifique, ingénieur diplômé de l'ENSISA, Je cherche un premier CDI en France.",
-    "cta": "parcours complet"
+    "cta": "Voir le parcours complet"
   },
   "stack": {
     "label": "stack",
@@ -125,7 +125,7 @@
     "headlineLine2": "ensemble.",
     "pitch": "CDI en IA appliquée ou dev fullstack. Je réponds sous 24h.",
     "ctaPrimary": "écrivez-moi",
-    "ctaAllChannels": "tous les moyens de me contacter",
+    "ctaAllChannels": "Voir tous les moyens de me contacter",
     "metadata": {
       "title": "Contact — Marian Szawelski",
       "description": "Écris-moi via email, LinkedIn ou GitHub. Disponible pour stage / CDI en France, IA appliquée et dev fullstack."
