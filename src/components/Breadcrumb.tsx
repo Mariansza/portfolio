@@ -16,7 +16,7 @@ export function Breadcrumb({ items, backHref = '/' }: BreadcrumbProps) {
         <Link
           href={backHref}
           aria-label="back"
-          className="border-mute-soft text-mute hover:border-mute hover:bg-fg/[0.04] hover:text-fg-bright inline-flex h-7 w-7 items-center justify-center rounded border leading-none transition-colors"
+          className="border-mute bg-fg/[0.03] text-mute hover:border-fg-dim hover:bg-fg/[0.06] hover:text-fg-bright inline-flex h-7 w-7 items-center justify-center rounded border leading-none transition-colors"
         >
           <span aria-hidden>←</span>
         </Link>

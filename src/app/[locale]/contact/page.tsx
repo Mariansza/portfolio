@@ -66,7 +66,7 @@ export default function ContactPage({ params }: LocaleParams) {
                   href={linkedinChannel.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="border-mute-soft text-fg hover:border-mute hover:text-fg-bright inline-flex items-center gap-2 rounded border px-5 py-3 transition-colors"
+                  className="border-mute bg-fg/[0.03] text-fg hover:border-fg-dim hover:bg-fg/[0.06] hover:text-fg-bright inline-flex items-center gap-2 rounded border px-5 py-3 transition-colors"
                 >
                   <span>{t('ctaLinkedIn')}</span>
                   <span aria-hidden>↗</span>

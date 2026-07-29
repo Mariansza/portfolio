@@ -42,14 +42,14 @@ export function Hero() {
           <div className="mt-14 flex flex-wrap gap-3 font-mono text-[13px]">
             <Link
               href="/projects"
-              className="border-mute-soft text-fg hover:border-mute hover:text-fg-bright inline-flex items-center gap-2 rounded border px-5 py-3 font-semibold transition-colors"
+              className="border-mute bg-fg/[0.03] text-fg hover:border-fg-dim hover:bg-fg/[0.06] hover:text-fg-bright inline-flex items-center gap-2 rounded border px-5 py-3 font-semibold transition-colors"
             >
               <span aria-hidden>→</span>
               <span>{t('ctaProjects')}</span>
             </Link>
             <a
               href="/marian-szawelski-cv.pdf"
-              className="border-mute-soft text-fg hover:border-mute hover:text-fg-bright inline-flex items-center gap-2 rounded border px-5 py-3 transition-colors"
+              className="border-mute bg-fg/[0.03] text-fg hover:border-fg-dim hover:bg-fg/[0.06] hover:text-fg-bright inline-flex items-center gap-2 rounded border px-5 py-3 transition-colors"
             >
               {t('ctaCV')}
             </a>
