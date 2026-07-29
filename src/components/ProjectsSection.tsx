@@ -9,24 +9,16 @@ export function ProjectsSection() {
 
   return (
     <section aria-labelledby="work-heading">
-      <div className="border-hairline flex items-baseline justify-between border-b px-6 pt-12 pb-5 lg:px-14">
+      <div className="border-hairline border-b px-6 pt-12 pb-5 lg:px-14">
         <div id="work-heading">
           <SectionHeader>{t('label')}</SectionHeader>
         </div>
-        <span className="text-mute font-mono text-xs">
-          <Link
-            href="/projects"
-            className="hover:text-fg-bright transition-colors"
-          >
-            {t('viewAll')} →
-          </Link>
-        </span>
       </div>
       <ul>
         {featured.map((project) => (
           <li
             key={project.id}
-            className="border-hairline hover:bg-fg/[0.02] border-b transition-colors"
+            className="hover:bg-fg/[0.02] transition-colors"
           >
             <article className="grid grid-cols-1 items-start gap-4 px-6 py-9 lg:grid-cols-[80px_1fr] lg:gap-8 lg:px-14">
               <div className="text-mute font-mono text-xs">
@@ -44,6 +36,15 @@ export function ProjectsSection() {
           </li>
         ))}
       </ul>
+      <div className="border-hairline border-b px-6 py-6 lg:px-14">
+        <Link
+          href="/projects"
+          className="text-mute hover:text-fg-bright inline-flex items-center gap-1.5 py-1 -my-1 font-mono text-[13px] transition-colors"
+        >
+          <span>{t('viewAll')}</span>
+          <span aria-hidden>→</span>
+        </Link>
+      </div>
     </section>
   );
 }
