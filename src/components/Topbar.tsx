@@ -40,12 +40,12 @@ export function Topbar() {
         </div>
         <nav
           aria-label="primary"
-          className="flex items-center gap-2 text-[13px]"
+          className="flex flex-wrap items-center gap-1.5 text-xs sm:gap-2 sm:text-[13px]"
         >
           <Link
             href="/"
             aria-current={pathname === '/' ? 'page' : undefined}
-            className={`relative inline-flex items-center overflow-hidden rounded-[3px] border px-3 py-1.5 transition-colors active:scale-95 ${
+            className={`relative inline-flex items-center overflow-hidden rounded-[3px] border px-2.5 py-1 transition-colors active:scale-95 sm:px-3 sm:py-1.5 ${
               pathname === '/'
                 ? 'border-accent/45 bg-accent/[0.08] text-fg-bright'
                 : 'border-mute-soft bg-fg/[0.03] text-mute hover:border-mute hover:bg-fg/[0.06] hover:text-fg-bright'
@@ -71,14 +71,14 @@ export function Topbar() {
               <ActiveCursor active={pathname === '/'} />
             </span>
           </Link>
-          <span aria-hidden className="bg-hairline mx-1 h-5 w-px" />
+          <span aria-hidden className="bg-hairline mx-0.5 h-5 w-px sm:mx-1" />
           {navItems.map((item) => {
             if (!item.enabled) {
               return (
                 <span
                   key={item.href}
                   aria-disabled="true"
-                  className="text-mute-soft cursor-default px-3 py-1.5"
+                  className="text-mute-soft cursor-default px-2.5 py-1 sm:px-3 sm:py-1.5"
                 >
                   {item.label}
                 </span>
@@ -90,7 +90,7 @@ export function Topbar() {
                 key={item.href}
                 href={item.href}
                 aria-current={isActive ? 'page' : undefined}
-                className={`group relative inline-flex items-center overflow-hidden rounded-[3px] border px-3 py-1.5 transition-colors active:scale-95 ${
+                className={`group relative inline-flex items-center overflow-hidden rounded-[3px] border px-2.5 py-1 transition-colors active:scale-95 sm:px-3 sm:py-1.5 ${
                   isActive
                     ? 'border-accent/45 bg-accent/[0.08] text-fg-bright'
                     : 'border-mute-soft bg-fg/[0.03] text-mute hover:border-mute hover:bg-fg/[0.06] hover:text-fg-bright'
