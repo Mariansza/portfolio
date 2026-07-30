@@ -4,6 +4,7 @@ import { AboutTeaser } from '@/components/AboutTeaser';
 import { Footer } from '@/components/Footer';
 import { Hero } from '@/components/Hero';
 import { ProjectsSection } from '@/components/ProjectsSection';
+import { Reveal } from '@/components/Reveal';
 import { StackSection } from '@/components/StackSection';
 
 type Props = {
@@ -18,11 +19,19 @@ export default function Home({ params }: Props) {
     <>
       <main className="flex flex-col">
         <Hero />
-        <ProjectsSection />
-        <AboutTeaser />
-        <StackSection />
+        <Reveal>
+          <ProjectsSection />
+        </Reveal>
+        <Reveal>
+          <AboutTeaser />
+        </Reveal>
+        <Reveal>
+          <StackSection />
+        </Reveal>
       </main>
-      <Footer />
+      <Reveal>
+        <Footer />
+      </Reveal>
     </>
   );
 }

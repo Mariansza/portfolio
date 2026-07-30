@@ -181,7 +181,9 @@ export default function Home({ params }: Props) {
           <StackSection />
         </Reveal>
       </main>
-      <Footer />
+      <Reveal>
+        <Footer />
+      </Reveal>
     </>
   );
 }
@@ -189,8 +191,10 @@ export default function Home({ params }: Props) {
 
 Only change from the current file: the `Reveal` import added in alphabetical
 order between `ProjectsSection` and `StackSection`, and `ProjectsSection`,
-`AboutTeaser`, `StackSection` each wrapped in `<Reveal>`. `Hero` and
-`Footer` are untouched.
+`AboutTeaser`, `StackSection`, and `Footer` each wrapped in `<Reveal>`.
+`Hero` is untouched. `Footer` is included because, despite its component
+name, it renders the "Contact" section (`SectionHeader` + headline + pitch —
+same structure as the other sections), not a generic page footer.
 
 - [ ] **Step 2: Typecheck**
 
@@ -207,9 +211,9 @@ Expected: no errors or warnings.
 Run: `pnpm dev`, then open `http://localhost:3000/fr` in Chrome.
 
 Check all four:
-1. Scroll down slowly — `ProjectsSection`, `AboutTeaser`, and `StackSection`
-   each fade in with a slight upward slide as they enter the viewport
-   (roughly when ~15% of the section is visible).
+1. Scroll down slowly — `ProjectsSection`, `AboutTeaser`, `StackSection`,
+   and the Contact section (`Footer`) each fade in with a slight upward
+   slide as their top edge enters the viewport.
 2. Open DevTools → Rendering tab → "Emulate CSS media feature
    prefers-reduced-motion" → set to "reduce", then reload the page and
    scroll — all sections should be visible immediately, with no fade/slide
@@ -222,9 +226,25 @@ Check all four:
    again — the section should already be at full opacity/position, i.e. the
    animation does not replay.
 
+This manual pass surfaced two real issues, fixed in `Reveal.tsx` (see
+Task 1's note above for the `react-hooks/set-state-in-effect` fix made
+before this point):
+
+- The Contact section (`Footer`) was missing from the wrap entirely — added
+  above.
+- `threshold: 0.15` fired too early on sections taller than the viewport
+  (e.g. `ProjectsSection`), so the transition finished before the user had
+  scrolled far enough to notice it. Replaced with `threshold: 0` +
+  `rootMargin: '0px 0px -10% 0px'`, which fires based on the element's top
+  edge entering the viewport rather than a percentage of its total height.
+  Also bumped `translate-y-6` → `translate-y-8` and `duration-700` →
+  `duration-[900ms]` for a more perceptible motion, per follow-up feedback.
+
 - [ ] **Step 5: Commit**
 
 ```bash
-git add "src/app/[locale]/page.tsx"
+git add "src/app/[locale]/page.tsx" src/components/Reveal.tsx \
+  docs/superpowers/specs/2026-07-30-scroll-reveal-animations-design.md \
+  docs/superpowers/plans/2026-07-30-scroll-reveal-animations.md
 git commit -m "feat(home): reveal sections on scroll"
 ```

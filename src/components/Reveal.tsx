@@ -45,7 +45,11 @@ export function Reveal({ children }: RevealProps) {
           observer.unobserve(node);
         }
       },
-      { threshold: 0.15 },
+      // threshold 0 + rootMargin: fires as soon as the element's top edge
+      // crosses into the top 90% of the viewport, regardless of the
+      // element's own height. A ratio-based threshold (e.g. 0.15) would
+      // fire far too early on sections taller than the viewport.
+      { threshold: 0, rootMargin: '0px 0px -10% 0px' },
     );
 
     observer.observe(node);
@@ -58,8 +62,8 @@ export function Reveal({ children }: RevealProps) {
   return (
     <div
       ref={ref}
-      className={`transition-[opacity,transform] duration-700 ease-out ${
-        isVisible ? 'translate-y-0 opacity-100' : 'translate-y-6 opacity-0'
+      className={`transition-[opacity,transform] duration-[900ms] ease-out ${
+        isVisible ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'
       }`}
     >
       {children}

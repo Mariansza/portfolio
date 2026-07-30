@@ -13,9 +13,11 @@ viewport, à la manière d'un effet "reveal on scroll" classique.
 
 ## Périmètre
 
-- Sections concernées : `ProjectsSection`, `AboutTeaser`, `StackSection`
-  (toutes les sections de la home **sauf** `Hero`, qui est déjà visible au
-  chargement — une animation d'entrée liée au scroll n'y aurait pas de sens).
+- Sections concernées : `ProjectsSection`, `AboutTeaser`, `StackSection`, et
+  `Footer` (qui est en réalité la section "Contact" — même structure
+  `SectionHeader` + titre + pitch que les autres, malgré son nom de
+  composant) — toutes les sections de la home **sauf** `Hero`, qui est déjà
+  visible au chargement.
 - Pages concernées pour cette itération : uniquement la home
   (`src/app/[locale]/page.tsx`). Le composant `Reveal` est générique et
   réutilisable ; l'étendre à `about/page.tsx` ou `projects/page.tsx` plus
@@ -83,9 +85,18 @@ nouvel ajout dans `@theme` — le pattern `@keyframes` existant, ex.
 `chip-sweep`, est pensé pour un effet de balayage multi-étapes, pas adapté
 ici) :
 
-- État initial (avant intersection) : `opacity-0 translate-y-6`
+- État initial (avant intersection) : `opacity-0 translate-y-8`
 - État révélé : `opacity-100 translate-y-0`
 - Transition : `transition-[opacity,transform] duration-700 ease-out`
+
+**Ajustement post-vérification manuelle** : le déclenchement initial
+utilisait `threshold: 0.15` (15% de la hauteur totale de l'élément visible).
+Sur les sections plus hautes que le viewport (ex. `ProjectsSection`), ce
+seuil est atteint très tôt — l'animation se termine avant que l'utilisateur
+ait fini de scroller jusqu'à la section, donnant l'impression qu'il ne se
+passe rien. Remplacé par `threshold: 0` + `rootMargin: '0px 0px -10% 0px'`,
+qui déclenche quand le **haut** de l'élément entre dans le viewport,
+indépendamment de sa hauteur totale.
 
 ### Accessibilité
 
