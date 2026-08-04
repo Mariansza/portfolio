@@ -10,9 +10,9 @@
     "available": "disponible - CDI",
     "name": "Marian",
     "lastName": "Szawelski.",
-    "role": "Ingénieur logiciel,",
-    "speciality": "spécialisé IA.",
-    "pitch": "Je construis des produits fullstack où <em>LLM et UX</em> se rencontrent, du prompt au pixel, du modèle au composant React. L'IA qui sert, pas qui encombre.",
+    "role": "Ingénieur IA,",
+    "speciality": "fullstack.",
+    "pitch": "Je construis des produits fullstack où <em>IA et UX</em> se rencontrent, du prompt au pixel, du modèle au composant React. L'IA qui sert, pas qui encombre.",
     "ctaProjects": "voir les projets",
     "ctaCV": "télécharger CV.pdf",
     "indexLabel": "INDEX"
