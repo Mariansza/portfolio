@@ -1,18 +1,18 @@
 {
   "metadata": {
-    "title": "Marian Szawelski — Portfolio",
+    "title": "Marian Szawelski - Portfolio",
     "description": "Portfolio de Marian Szawelski, ingénieur logiciel spécialisé IA. Projets fullstack et IA appliquée. Disponible pour un CDI en France."
   },
   "topbar": {
     "shortcutLabel": "raccourci"
   },
   "hero": {
-    "available": "disponible — CDI",
+    "available": "disponible - CDI",
     "name": "Marian",
     "lastName": "Szawelski.",
     "role": "Ingénieur logiciel,",
     "speciality": "spécialisé IA.",
-    "pitch": "Je construis des produits fullstack où <em>LLM et UX</em> se rencontrent — du prompt au pixel, du modèle au composant React. L'IA qui sert, pas qui encombre.",
+    "pitch": "Je construis des produits fullstack où <em>LLM et UX</em> se rencontrent, du prompt au pixel, du modèle au composant React. L'IA qui sert, pas qui encombre.",
     "ctaProjects": "voir les projets",
     "ctaCV": "télécharger CV.pdf",
     "indexLabel": "INDEX"
@@ -22,7 +22,7 @@
     "summary": "3 projets",
     "viewAll": "Voir tous les projets",
     "metadata": {
-      "title": "Projets — Marian Szawelski",
+      "title": "Projets - Marian Szawelski",
       "description": "Projets fullstack et IA appliquée : Tessan IA Marketing en production, segmentation U-Net, classification ECG."
     },
     "page": {
@@ -39,11 +39,11 @@
     },
     "items": {
       "tessan": {
-        "title": "Tessan IA Marketing — plateforme de génération",
+        "title": "Tessan IA Marketing - plateforme de génération",
         "pitch": "Plateforme interne de génération marketing pour Tessan, déployée en production. RAG sur pgvector + orchestration de 9 modèles (GPT-4o, Imagen, Veo, HeyGen) pour produire texte, image et vidéo cohérents avec la marque. Autopilot de planification, validation humaine, publication Facebook/Instagram intégrée. Build solo.",
         "caseStudy": {
           "metadata": {
-            "title": "Tessan IA Marketing — case study — Marian Szawelski",
+            "title": "Tessan IA Marketing - case study - Marian Szawelski",
             "description": "Conception et build solo d'une plateforme IA de génération marketing déployée en production : RAG pgvector, orchestration de 9 modèles, autopilot, publication Meta."
           },
           "breadcrumb": "tessan",
@@ -57,11 +57,11 @@
           "tagsLabel": "STACK",
           "context": {
             "title": "context",
-            "body": "Tessan est une entreprise française de télémédecine : bornes, cabines, et tables de téléconsultation déployées en pharmacie. L'équipe marketing doit publier régulièrement sur Facebook et Instagram en respectant une charte forte : ton médical crédible, valeurs (« la technologie sert le soin, jamais l'inverse »), et cohérence visuelle des produits réels qui doivent apparaître à l'identique sur chaque visuel. Maintenir ce niveau d'exigence sur un rythme de publication soutenu est chronophage — la communication réseaux est la première tâche sacrifiée sous pression. Le CEO m'a confié seul la conception et le développement d'une plateforme interne d'automatisation marketing par IA."
+            "body": "Tessan est une entreprise française de télémédecine : bornes, cabines, et tables de téléconsultation déployées en pharmacie. L'équipe marketing doit publier régulièrement sur Facebook et Instagram en respectant une charte forte : ton médical crédible, valeurs (« la technologie sert le soin, jamais l'inverse »), et cohérence visuelle des produits réels qui doivent apparaître à l'identique sur chaque visuel. Maintenir ce niveau d'exigence sur un rythme de publication soutenu est chronophage, la communication réseaux est la première tâche sacrifiée sous pression. Le CEO m'a confié seul la conception et le développement d'une plateforme interne d'automatisation marketing par IA."
           },
           "challenge": {
             "title": "challenge",
-            "intro": "Le problème n'est pas de générer du contenu, c'est de produire du contenu qui sonne Tessan. Respect des interdits rédactionnels, cadre médical crédible, et zéro hallucination de produits — pas de « borne compacte » ou « Tessan Pro » inventés par le modèle.",
+            "intro": "Le problème n'est pas de générer du contenu, c'est de produire du contenu qui sonne Tessan. Respect des interdits rédactionnels, cadre médical crédible, et zéro hallucination de produits, pas de « borne compacte » ou « Tessan Pro » inventés par le modèle.",
             "objectivesLabel": "Objectifs fixés :",
             "objectives": [
               "Génération multi-format (texte, image, vidéo) avec garantie de cohérence de marque via une base de connaissances",
@@ -74,13 +74,13 @@
           "approach": {
             "title": "approach",
             "blocks": {
-              "arch": "<strong>Architecture trois étages.</strong> Frontend Next.js 15 exporté statique sur Firebase Hosting, backend FastAPI async sur Cloud Run, Postgres + pgvector sur Cloud SQL. Le backend joue proxy sécurisé — aucun secret (OpenAI, Meta, HeyGen) ne touche le navigateur.",
-              "rag": "<strong>RAG sur pgvector</strong> comme cœur technique. Ingestion de PDF, DOCX, et — clé — images : GPT-4o Vision décrit chaque visuel (produits, charte, anciens posts) avec un prompt spécialisé par collection. Embeddings text-embedding-3-small (1536 dim.). Recherche par distance cosinus avec boost des chunks validés par feedback utilisateur — le système s'aligne au fil du temps sur ce que l'équipe considère bon.",
+              "arch": "<strong>Architecture trois étages.</strong> Frontend Next.js 15 exporté statique sur Firebase Hosting, backend FastAPI async sur Cloud Run, Postgres + pgvector sur Cloud SQL. Le backend joue proxy sécurisé, aucun secret (OpenAI, Meta, HeyGen) ne touche le navigateur.",
+              "rag": "<strong>RAG sur pgvector</strong> comme cœur technique. Ingestion de PDF, DOCX, et, clé, images : GPT-4o Vision décrit chaque visuel (produits, charte, anciens posts) avec un prompt spécialisé par collection. Embeddings text-embedding-3-small (1536 dim.). Recherche par distance cosinus avec boost des chunks validés par feedback utilisateur, le système s'aligne au fil du temps sur ce que l'équipe considère bon.",
               "orchestration": "<strong>Orchestration de 9 modèles IA.</strong> GPT-4o (texte + Vision), Imagen 4 + Nano Banana 2 (image), Veo 3.1 (vidéo), HeyGen v2 (avatar parlant).",
-              "autoDetect": "<strong>Innovation clé — auto-détection produit.</strong> GPT-4o et Imagen, laissés libres, inventent des variantes de produits Tessan : « borne compacte », « Tessan Pro », terminaux qui n'ont jamais existé. J'ai développé un module de détection par mots-clés (avec normalisation Unicode pour le français) sur les 7 produits réels pré-enregistrés en base. Quand un produit est détecté dans la description, bascule silencieuse de Imagen 4 vers Nano Banana 2 avec injection des photos de référence (jusqu'à 14 simultanées) et instruction explicite « AUCUNE modification, AUCUNE invention de variante ». Zéro hallucination produit, zéro choix technique demandé à l'utilisateur.",
+              "autoDetect": "<strong>Innovation clé - auto-détection produit.</strong> GPT-4o et Imagen, laissés libres, inventent des variantes de produits Tessan : « borne compacte », « Tessan Pro », terminaux qui n'ont jamais existé. J'ai développé un module de détection par mots-clés (avec normalisation Unicode pour le français) sur les 7 produits réels pré-enregistrés en base. Quand un produit est détecté dans la description, bascule silencieuse de Imagen 4 vers Nano Banana 2 avec injection des photos de référence (jusqu'à 14 simultanées) et instruction explicite « AUCUNE modification, AUCUNE invention de variante ». Zéro hallucination produit, zéro choix technique demandé à l'utilisateur.",
               "humanLoop": "<strong>Human-in-the-loop en deux phases</strong> sur les workflows lourds (carrousel, vidéo). Phase 1 : un appel GPT-4o produit un plan éditable. Phase 2 : génération coûteuse uniquement après validation. Évite le gaspillage de crédits si le modèle part sur une fausse piste. Carrousel de 10 slides en ~1 min (vs 5 min en séquentiel).",
-              "autopilot": "<strong>Autopilot</strong> — module le plus complexe. L'équipe définit ses créneaux hebdomadaires, alimente un pool de sujets (manuels ou suggérés par GPT-4o), et n'intervient qu'à la validation. Workflow à 9 états, batchs traçables, authentification duale (JWT manuel ou secret partagé pour déclenchement Cloud Scheduler).",
-              "meta": "<strong>Publication Meta</strong> via Graph API v21.0 — feature flags, protection double-publication, traçabilité complète."
+              "autopilot": "<strong>Autopilot</strong> - module le plus complexe. L'équipe définit ses créneaux hebdomadaires, alimente un pool de sujets (manuels ou suggérés par GPT-4o), et n'intervient qu'à la validation. Workflow à 9 états, batchs traçables, authentification duale (JWT manuel ou secret partagé pour déclenchement Cloud Scheduler).",
+              "meta": "<strong>Publication Meta</strong> via Graph API v21.0, feature flags, protection double-publication, traçabilité complète."
             }
           },
           "outcome": {
@@ -96,11 +96,11 @@
         }
       },
       "unet": {
-        "title": "Segmentation de bâtiments — U-Net",
+        "title": "Segmentation de bâtiments - U-Net",
         "pitch": "Modèle de segmentation sémantique sur imagerie satellite haute résolution. Prétraitement, entraînement supervisé, évaluation IoU/Dice. Pipeline reproductible, notebooks commentés."
       },
       "ecg": {
-        "title": "Classification ECG — MLP · CNN · RNN",
+        "title": "Classification ECG - MLP · CNN · RNN",
         "pitch": "Détection d'infarctus sur signaux ECG. Trois architectures comparées, optimisation d'hyperparamètres."
       }
     }
@@ -127,12 +127,12 @@
     "ctaPrimary": "écrivez-moi",
     "ctaAllChannels": "Voir tous les moyens de me contacter",
     "metadata": {
-      "title": "Contact — Marian Szawelski",
+      "title": "Contact - Marian Szawelski",
       "description": "Écris-moi via email, LinkedIn ou GitHub. Disponible pour stage / CDI en France, IA appliquée et dev fullstack."
     },
     "page": {
       "breadcrumb": "contact",
-      "available": "réponse sous 24h — la plupart du temps beaucoup plus vite",
+      "available": "réponse sous 24h, la plupart du temps beaucoup plus vite",
       "headline": "Parlons ensemble.",
       "intro": "Je suis joignable sur tous ces canaux.",
       "ctaEmail": "écrire un email",
@@ -145,11 +145,11 @@
   },
   "about": {
     "metadata": {
-      "title": "À propos — Marian Szawelski",
+      "title": "À propos - Marian Szawelski",
       "description": "Parcours, formation et conviction de Marian Szawelski, ingénieur informatique spécialisé IA."
     },
     "breadcrumb": "about",
-    "available": "disponible — CDI",
+    "available": "disponible - CDI",
     "name": "Marian",
     "lastName": "Szawelski.",
     "intro": "Jeune ingénieur informatique diplômé, spécialisé IA avec de solides compétences fullstack.",
