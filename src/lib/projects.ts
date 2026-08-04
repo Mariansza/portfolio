@@ -12,6 +12,7 @@ export type Project = {
   status: ProjectStatus;
   liveUrl?: string;
   repoUrl?: string;
+  youtubeId?: string;
 };
 
 export const projects: readonly Project[] = [
@@ -23,6 +24,7 @@ export const projects: readonly Project[] = [
     caseStudyReady: true,
     featured: true,
     status: 'production',
+    youtubeId: 'zpZxO0mZqYM',
   },
   {
     id: 'unet',

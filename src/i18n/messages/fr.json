@@ -30,6 +30,7 @@
       "headline": "Sélection.",
       "intro": "Trois projets, du dernier en production jusqu'aux travaux académiques fondateurs. Un case study détaillé pour l'instant, d'autres projets seront bientôt ajoutés à la liste.",
       "viewCaseStudy": "voir le case study",
+      "viewCaseStudyWithDemo": "voir le case study et la démo",
       "comingSoon": "case study à venir",
       "status": {
         "production": "en production",
@@ -55,6 +56,11 @@
             "outcome": "outcome"
           },
           "tagsLabel": "STACK",
+          "demo": {
+            "title": "démo",
+            "playLabel": "Lire la vidéo de présentation",
+            "videoTitle": "Tessan IA Marketing - vidéo de présentation"
+          },
           "context": {
             "title": "context",
             "body": "Tessan est une entreprise française de télémédecine : bornes, cabines, et tables de téléconsultation déployées en pharmacie. L'équipe marketing doit publier régulièrement sur Facebook et Instagram en respectant une charte forte : ton médical crédible, valeurs (« la technologie sert le soin, jamais l'inverse »), et cohérence visuelle des produits réels qui doivent apparaître à l'identique sur chaque visuel. Maintenir ce niveau d'exigence sur un rythme de publication soutenu est chronophage, la communication réseaux est la première tâche sacrifiée sous pression. Le CEO m'a confié seul la conception et le développement d'une plateforme interne d'automatisation marketing par IA."

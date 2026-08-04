@@ -7,6 +7,7 @@ import { Breadcrumb } from '@/components/Breadcrumb';
 import { FooterMini } from '@/components/FooterMini';
 import { SectionHeader } from '@/components/SectionHeader';
 import { Tag } from '@/components/Tag';
+import { YouTubeFacade } from '@/components/YouTubeFacade';
 import { Link } from '@/i18n/navigation';
 import { getProjectById, projects } from '@/lib/projects';
 
@@ -117,6 +118,25 @@ export default function CaseStudyPage({ params }: Params) {
           </aside>
         </div>
       </section>
+
+      {project.youtubeId && (
+        <section
+          id="demo"
+          aria-labelledby="demo-heading"
+          className="border-hairline border-b px-6 py-12 lg:px-14 lg:py-16"
+        >
+          <div id="demo-heading">
+            <SectionHeader>{tCase('demo.title')}</SectionHeader>
+          </div>
+          <div className="mt-10 max-w-[760px]">
+            <YouTubeFacade
+              videoId={project.youtubeId}
+              videoTitle={tCase('demo.videoTitle')}
+              playLabel={tCase('demo.playLabel')}
+            />
+          </div>
+        </section>
+      )}
 
       <section
         id="context"

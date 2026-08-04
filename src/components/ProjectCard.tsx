@@ -34,9 +34,11 @@ export function ProjectCard({ project }: ProjectCardProps) {
           {pitch}
         </p>
         {project.caseStudyReady ? (
-          <p className="text-accent mt-3 font-mono text-[11px] uppercase tracking-[0.08em]">
+          <p className="text-accent mt-3 font-mono text-[13px] uppercase tracking-[0.08em]">
             <span aria-hidden>→ </span>
-            {tPage('viewCaseStudy')}
+            {project.youtubeId
+              ? tPage('viewCaseStudyWithDemo')
+              : tPage('viewCaseStudy')}
           </p>
         ) : (
           <p className="text-mute-soft mt-3 font-mono text-[11px] uppercase tracking-[0.08em]">
